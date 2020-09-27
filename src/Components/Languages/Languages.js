@@ -4,7 +4,7 @@ import {LanguagesContainer, Language} from './StyledLanguages'
 
 export const Languages = () => {
   return (
-    <SectionContainer>
+    <SectionContainer id={'Languages'}>
         <SectionTitle>Languages</SectionTitle>
         <Separator>___</Separator>
         <LanguagesContainer>

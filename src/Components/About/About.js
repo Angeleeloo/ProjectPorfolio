@@ -3,7 +3,7 @@ import {SectionContainer, SectionTitle, Separator} from '../../Components/Styled
 
 export const About = () => {
   return (
-    <SectionContainer>
+    <SectionContainer id={'About'}>
         <SectionTitle>About</SectionTitle>
         <Separator>___</Separator>
         <div>

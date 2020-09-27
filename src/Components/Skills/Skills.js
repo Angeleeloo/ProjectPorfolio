@@ -4,7 +4,7 @@ import {SkillsContainer, SkillContent} from './StyledSkills.js';
 
 export const Skills = () => {
   return (
-    <SectionContainer>
+    <SectionContainer id={'Skills'}>
         <SectionTitle>Skills</SectionTitle>
         <Separator>___</Separator>
         <SkillsContainer>

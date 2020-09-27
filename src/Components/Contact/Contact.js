@@ -4,7 +4,7 @@ import {ContactContainer, InputForm, Input, Button, ContactDetails, Title, Subti
 
 export const Contact = () => {
   return (
-    <SectionContainer>
+    <SectionContainer id={'Contact'}>
         <SectionTitle>Contact</SectionTitle>
         <Separator>___</Separator>
         <ContactContainer>

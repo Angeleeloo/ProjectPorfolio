@@ -9,6 +9,8 @@ export const MainContainer = styled.div`
 
 export const LeftPane = styled.div`
   width: 30%;
+  display: flex;
+  justify-content: flex-end;
   background-color: #011627;
 `;
 
@@ -26,7 +28,7 @@ export const ContentContainer = styled.div`
 `;
 
 export const SectionContainer = styled.div`
-  margin: 10px;
+  margin: 50px;
 `;
 
 export const SectionTitle = styled.h2`

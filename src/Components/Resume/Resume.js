@@ -4,7 +4,7 @@ import {ExperienceContainer, Date, JobDescription} from './StyledResume.js';
 
 export const Resume = () => {
   return (
-    <SectionContainer>
+    <SectionContainer id={'Resume'}>
         <SectionTitle>Resume</SectionTitle>
         <Separator>___</Separator>
         <ExperienceContainer>

@@ -4,7 +4,7 @@ import {Separator} from '../../Components/StyledMainPage.js';
 
 export const Home = () => {
   return (
-    <HomeContainer>
+    <HomeContainer id={'Home'}>
       <TopContainer>
           <Text>Hi, I'm</Text>
           <Name>Angelica <br/> Angress</Name>

@@ -3,6 +3,10 @@ import {HomeContainer, TopContainer, Text, Name, Profession, DownloadContainer, 
 import {Separator} from '../../Components/StyledMainPage.js';
 
 export const Home = () => {
+  const scrollToSection = (section) => {
+    document.getElementById(section).scrollIntoView({behavior: "smooth", block: "start", inline: "center"});
+  };
+
   return (
     <HomeContainer id={'Home'}>
       <TopContainer>
@@ -12,8 +16,8 @@ export const Home = () => {
           <Profession>Developer</Profession>
       </TopContainer>
       <DownloadContainer>
-        <DownloadItem1>DOWNLOAD RESUME</DownloadItem1>
-        <DownloadItem2>CONTACT ME</DownloadItem2>
+        <DownloadItem1 href='./Files/Angelica_Angress_CV.pdf' download>DOWNLOAD RESUME</DownloadItem1>
+        <DownloadItem2 onClick={() => scrollToSection('Contact')}>CONTACT ME</DownloadItem2>
       </DownloadContainer>
     </HomeContainer>
   );

@@ -11,7 +11,7 @@ export const TopContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   height: 300px;
-  margin: 10px;
+  margin: 50px;
 `;
 
 export const Text = styled.p`
@@ -36,15 +36,17 @@ export const DownloadContainer = styled.div`
   height: 40px;
 `;
 
-export const DownloadItem1 = styled.div`
+export const DownloadItem1 = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   color: white;
   background-color: #e71d36;
+  text-decoration: none;
 `;
 
 export const DownloadItem2 = styled(DownloadItem1)`
   background-color: #06233B;
+  cursor: pointer;
 `;

@@ -4,7 +4,7 @@ import {EducationContainer, Date, EducationDesc} from './StyledEducation';
 
 export const Education = () => {
   return (
-    <SectionContainer>
+    <SectionContainer id={'Education'}>
         <SectionTitle>Education</SectionTitle>
         <Separator>___</Separator>
         <EducationContainer>

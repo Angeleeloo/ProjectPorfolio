@@ -45,7 +45,11 @@ export const Subtitle = styled.p`
   color: #d6d9dc;
 `;
 
-export const Detail = styled.div`
+export const Detail = styled.a`
   color: #d6d9dc;
   padding: 5px;
+`;
+
+export const Footer = styled.div`
+  
 `;

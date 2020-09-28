@@ -34,8 +34,19 @@ export const Item = styled.div`
   }
 `;
 
-export const SocialButtons = styled.div`
+export const SocialButtonsContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+`;
+
+export const ButtonLink = styled.a`
+  text-decoration: none;
+  &:hover {
+    filter: contrast;
+  }
+`;
+
+export const SocialButton = styled.img`
+  filter: invert(1);  
 `;

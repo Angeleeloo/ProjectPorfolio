@@ -18,9 +18,9 @@ export const Contact = () => {
             <ContactDetails>
                 <Title>Let’s talk</Title>
                 <Subtitle>Got an offer? Wanna collaborate?</Subtitle>
-                <Detail>P - +972-54-544-3223</Detail>
-                <Detail>E - angelica.avm@gmail.com</Detail>
-                <Detail>A - Tel Aviv, Israel</Detail>
+                <Detail href={'tel:+972-54-544-3223'}>P - +972-54-544-3223</Detail>
+                <Detail href={'mailto:angelica.avm@gmail.com'}>E - angelica.avm@gmail.com</Detail>
+                <Detail href={'https://goo.gl/maps/a3mni3CdwYnQPYA29'} target={'_blank'}>A - Tel Aviv, Israel</Detail>
             </ContactDetails>
         </ContactContainer>
     </SectionContainer>

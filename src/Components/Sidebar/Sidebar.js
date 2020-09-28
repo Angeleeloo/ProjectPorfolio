@@ -1,5 +1,5 @@
 import React from 'react';
-import {SidebarContainer, Branding, MenuItems, Item, SocialButtons} from './StyledSidebar'
+import {SidebarContainer, Branding, MenuItems, Item, SocialButtonsContainer, ButtonLink, SocialButton} from './StyledSidebar'
 
 export const Sidebar = () => {
   
@@ -10,8 +10,7 @@ const scrollToSection = (section) => {
   return (
     <SidebarContainer>
         <Branding>
-            <div>Angelica Angress</div>
-            <div style={{ fontWeight: "normal", fontSize: "17px"}}>Developer</div>
+            <div>AA | Developer</div>
         </Branding>
         <MenuItems>
             <Item onClick={() => scrollToSection('Home')}>Home</Item>
@@ -22,11 +21,14 @@ const scrollToSection = (section) => {
             <Item onClick={() => scrollToSection('Languages')}>Languages</Item>
             <Item onClick={() => scrollToSection('Contact')}>Contact</Item>
         </MenuItems>
-        <SocialButtons>
-            <div>Li</div>
-            <div>In</div>
-            <div>SE</div>
-        </SocialButtons>
+        <SocialButtonsContainer>
+            <ButtonLink href={'https://www.linkedin.com/'} target={'_blank'}>
+                <SocialButton src={'./Images/linkedin.svg'} alt={'linkedin icon'}/>
+            </ButtonLink>
+            <ButtonLink href={'https://github.com/'} target={'_blank'}>
+                <SocialButton src={'./Images/github.svg'} alt={'linkedin icon'}/>
+            </ButtonLink>        
+        </SocialButtonsContainer>
     </SidebarContainer>
   );
 };

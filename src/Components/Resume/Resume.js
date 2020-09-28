@@ -65,7 +65,7 @@ export const Resume = () => {
                         </TimelineContent>
                         </TimelineItem> 
                     )}
-                    </Timeline>
+                </Timeline>
             </ExperienceContainer>
     </SectionContainer>
   );

@@ -44,6 +44,7 @@ export const DownloadItem1 = styled.a`
   color: white;
   background-color: #e71d36;
   text-decoration: none;
+  font-weight: bold;
 `;
 
 export const DownloadItem2 = styled(DownloadItem1)`

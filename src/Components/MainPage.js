@@ -1,5 +1,5 @@
-import React from 'react';
-import {MainContainer, LeftPane, RightPane, ContentContainer} from './StyledMainPage';
+import React, { useState } from 'react';
+import {MainContainer, LeftPane, RightPane, ContentContainer, ScrollToTopButton, ScrollToTopIcon} from './StyledMainPage';
 import {Sidebar} from './Sidebar/Sidebar';
 import {Home} from './Home/Home';
 import {About} from './About/About';
@@ -10,6 +10,20 @@ import {Languages} from './Languages/Languages';
 import {Contact} from './Contact/Contact';
 
 export const MainPage = () => {
+  const [displayState, setdisplayState] = useState(false);
+  window.onscroll = function() {scrollFunction()};
+  const scrollFunction = () => {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      setdisplayState(true);
+    } else {
+      setdisplayState(false);
+    }
+  }
+  const topFunction = () => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+
   return (
     <MainContainer>
         <LeftPane>
@@ -26,6 +40,9 @@ export const MainPage = () => {
                 <Contact/>
             </ContentContainer>
         </RightPane>
+        <ScrollToTopButton displayState={displayState} onClick={topFunction}>
+            Scroll to top <ScrollToTopIcon src={'./Images/arrow-up.svg'}/>
+        </ScrollToTopButton>
     </MainContainer>
   );
 }

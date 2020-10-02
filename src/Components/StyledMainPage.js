@@ -25,6 +25,30 @@ export const ContentContainer = styled.div`
   justify-content: space-between;
   background-color: white;
   width: 800px;
+  margin-left: 30px;
+  min-height: 100vh;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  &:before {
+    top: 0;
+    background-color: #334452;
+    content: '';
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    z-index: 2;
+  }
+  &:after {
+    bottom: 0;
+    background-color: #334452;
+    content: '';
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    z-index: 2;
+  }
 `;
 
 export const ScrollToTopButton = styled.div`

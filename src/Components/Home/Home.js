@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {HomeContainer, TopContainer, Text, Name, Profession, DownloadContainer, DownloadItem1, DownloadItem2} from './StyledHome'
 import {Separator} from '../../Components/StyledMainPage.js';
 
@@ -19,9 +19,9 @@ export const Home = () => {
     }
   }
 
-  window.onload = function() {
+  useEffect(() => {
     typeWriter();
-  };
+  }, []);
 
   return (
     <HomeContainer id={'Home'}>

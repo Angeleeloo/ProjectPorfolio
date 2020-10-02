@@ -11,7 +11,7 @@ import {Contact} from './Contact/Contact';
 
 export const MainPage = () => {
   const [displayState, setdisplayState] = useState(false);
-  window.onscroll = function() {scrollFunction()};
+  window.onscroll = () => {scrollFunction()};
   const scrollFunction = () => {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
       setdisplayState(true);
@@ -19,7 +19,7 @@ export const MainPage = () => {
       setdisplayState(false);
     }
   }
-  const topFunction = () => {
+  const scrollToTop = () => {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   }
@@ -40,7 +40,7 @@ export const MainPage = () => {
                 <Contact/>
             </ContentContainer>
         </RightPane>
-        <ScrollToTopButton displayState={displayState} onClick={topFunction}>
+        <ScrollToTopButton displayState={displayState} onClick={scrollToTop}>
             Scroll to top <ScrollToTopIcon src={'./Images/arrow-up.svg'}/>
         </ScrollToTopButton>
     </MainContainer>

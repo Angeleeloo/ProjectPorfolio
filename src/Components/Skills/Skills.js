@@ -11,7 +11,7 @@ export const Skills = () => {
         <SkillsContainer>
             <SkillCard>
                 <SkillCardInner>
-                    <SkillFront>Project Management</SkillFront>
+                    <SkillFront>Project<br/>Manager</SkillFront>
                     <SkillBack>
                         Jira boards (Scrum, Kandban, customized dashboards), sprint statistics and reports, work
                         procedure documentation and training guidelines. Gantt charts using TeamGantt.
@@ -21,7 +21,7 @@ export const Skills = () => {
 
             <SkillCard>
                 <SkillCardInner>
-                    <SkillFront>Frontend Development</SkillFront>
+                    <SkillFront>Frontend<br/>Developer</SkillFront>
                     <SkillBack>
                         HTML, CSS, Javascript, React, AngularJS, Typescript, Grunt, Webpack, Webstorm, Gitlab, TeamCity.
                     </SkillBack> 
@@ -30,7 +30,7 @@ export const Skills = () => {
 
             <SkillCard>
                 <SkillCardInner>
-                    <SkillFront>QA</SkillFront>
+                    <SkillFront>QA<br/>Team Leader</SkillFront>
                     <SkillBack>
                         Software and web application testing. iOS, Android, desktop platforms. TeamCity deployments and automation
                         runs. STPs documented in Enterprise Tester and excel. Use of ADB tools.

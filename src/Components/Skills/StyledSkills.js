@@ -8,8 +8,8 @@ export const SkillsContainer = styled.div`
 
 export const SkillCard = styled.div`
   background-color: transparent;
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   border: 1px solid #f1f1f1;
   perspective: 1000px;
 `;
@@ -30,7 +30,6 @@ export const SkillFront = styled.div`
   position: absolute;
   width: 100%;
   height: 100%;
-  padding: 20px;
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
   color: white;

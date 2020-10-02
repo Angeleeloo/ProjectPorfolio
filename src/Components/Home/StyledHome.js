@@ -17,17 +17,17 @@ export const TopContainer = styled.div`
 export const Text = styled.p`
   font-size: 18px;
   color: #e71d36;
+  margin: 0px;
 `;
 
 export const Name = styled.h1`
-  margin: 0px;
   font-size: 60px;
   font-weight: bold;
+  color: black;
 `;
 
 export const Profession = styled(Text)`
-  font-size: 18px;
-  color: black;
+  color: #757575;
 `;
 
 export const DownloadContainer = styled.div`
@@ -40,11 +40,14 @@ export const DownloadItem1 = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
   width: 100%;
   color: white;
-  background-color: #e71d36;
-  text-decoration: none;
+  font-size: 14px;
   font-weight: bold;
+  letter-spacing: 0.25px;
+  background-color: #e71d36;
+  padding: 23px 0px 21px 0px;
 `;
 
 export const DownloadItem2 = styled(DownloadItem1)`

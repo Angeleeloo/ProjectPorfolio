@@ -8,10 +8,10 @@ export const SidebarContainer = styled.div`
   background-color: #011627;
   color: white;
   padding: 40px;
-  border: 1px white solid;
   position: fixed;
   top: 0;
   bottom: 0px;
+  border-left: 1px rgba(255,255,255,0.15) solid;
 `;
 
 export const Branding = styled.div`
@@ -30,7 +30,7 @@ export const Item = styled.div`
   font-size: 16px;
   cursor: pointer;
   &:hover {
-    color: red;
+    color: rgba(255,255,255,.4);
   }
 `;
 

@@ -7,19 +7,17 @@ export const Home = () => {
     document.getElementById(section).scrollIntoView({behavior: "smooth", block: "start", inline: "center"});
   };
 
-  let i = 0;
-  const txt = 'Angelica Angress';
-  const speed = 100;
-
-  const typeWriter =() => {
-    if (i < txt.length) {
-      document.getElementById("demo").innerHTML += txt.charAt(i);
-      i++;
-      setTimeout(typeWriter, speed);
-    }
-  }
-
   useEffect(() => {
+    let i = 0;
+    const txt = 'Angelica Angress';
+    const speed = 100;
+    const typeWriter =() => {
+      if (i < txt.length) {
+        document.getElementById("demo").innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+    };
     typeWriter();
   }, []);
 

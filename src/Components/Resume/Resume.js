@@ -16,19 +16,20 @@ export const Resume = () => {
 
     useLayoutEffect(() => {
         const topPos = element => element.getBoundingClientRect().top;
+        console.log('topPos is ', topPos);
         const dot1Pos = topPos(dot1.current),
               dot2Pos = topPos(dot2.current),
               dot3Pos = topPos(dot3.current),
               dot4Pos = topPos(dot3.current);
         const onScroll = () => {
             const scrollPos = window.scrollY + window.innerHeight;
-            if (dot1Pos < scrollPos) {
+            if (scrollPos > 1660 && scrollPos < 1860) {
                 setDotActive(state => ({ ...state, dot1: true }));
-            } else if (dot2Pos < scrollPos) {
+            } else if (scrollPos > 1860 && scrollPos < 2060) {
                 setDotActive(state => ({ ...state, dot2: true }));
-            } else if (dot3Pos < scrollPos) {
+            } else if (scrollPos > 2060 && scrollPos < 2260) {
                 setDotActive(state => ({ ...state, dot3: true }));
-            } else if (dot4Pos < scrollPos) {
+            } else if (scrollPos > 2260) {
                 setDotActive(state => ({ ...state, dot4: true }));
             }
         };
@@ -45,18 +46,18 @@ export const Resume = () => {
                 <ExperienceItem>
                     <Date>2018 - PRESENT</Date>
                     <TimelineSeparator>
-                        <TimelineDot ref={dot1} style={{ backgroundColor: dotActive.dot1 ? 'red' : 'grey' }}/>
+                        <TimelineDot ref={dot1} style={{ backgroundColor: dotActive.dot1 ? 'red' : 'white' }}/>
                         <TimelineConnector />
                     </TimelineSeparator> 
                         <ExperienceDesc>
                             <Title><b>Developer, B2B team</b> | SimilarWeb</Title>
                             <Subtitle>Developing, refactoring and fixing web components, mainly in React and Typescript, some in AngularJS legacy code.</Subtitle>
                         </ExperienceDesc>
-                </ExperienceItem> 
+                </ExperienceItem>
                 <ExperienceItem>
                     <Date>2015 - 2018</Date>
                     <TimelineSeparator>
-                    <TimelineDot ref={dot2} style={{ backgroundColor: dotActive.dot2 ? 'red' : 'grey' }}/>
+                    <TimelineDot ref={dot2} style={{ backgroundColor: dotActive.dot2 ? 'red' : 'white' }}/>
                         <TimelineConnector />
                     </TimelineSeparator>    
                         <ExperienceDesc>
@@ -67,7 +68,7 @@ export const Resume = () => {
                 <ExperienceItem>
                     <Date>2011 - 2015</Date>
                     <TimelineSeparator>
-                    <TimelineDot ref={dot3} style={{ backgroundColor: dotActive.dot2 ? 'red' : 'grey' }}/>
+                    <TimelineDot ref={dot3} style={{ backgroundColor: dotActive.dot3 ? 'red' : 'white' }}/>
                         <TimelineConnector />
                     </TimelineSeparator>
                         <ExperienceDesc>
@@ -78,14 +79,14 @@ export const Resume = () => {
                 <ExperienceItem>
                     <Date>2010 – 2011</Date>
                     <TimelineSeparator>
-                    <TimelineDot ref={dot4} style={{ backgroundColor: dotActive.dot2 ? 'red' : 'grey' }}/>
+                    <TimelineDot ref={dot4} style={{ backgroundColor: dotActive.dot4 ? 'red' : 'white' }}/>
                         <TimelineConnector />
                     </TimelineSeparator>    
                         <ExperienceDesc>
                             <Title><b>Mobile QA Engineer</b> | Viber</Title>
                             <Subtitle>Defined and developed the QA infrastructure from the ground up.</Subtitle>
                         </ExperienceDesc>
-                </ExperienceItem> 
+                </ExperienceItem>
             </ExperienceContainer>
     </SectionContainer>
   );

@@ -8,6 +8,7 @@ import {Skills} from './Skills/Skills';
 import {Education} from './Education/Education';
 import {Languages} from './Languages/Languages';
 import {Contact} from './Contact/Contact';
+import {Footer} from './Footer/Footer';
 
 export const MainPage = () => {
   const [displayState, setdisplayState] = useState(false);
@@ -38,6 +39,7 @@ export const MainPage = () => {
                 <Education/>
                 <Languages/>
                 <Contact/>
+                <Footer/>
             </ContentContainer>
         </RightPane>
         <ScrollToTopButton displayState={displayState} onClick={scrollToTop}>

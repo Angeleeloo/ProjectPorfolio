@@ -12,6 +12,9 @@ export const SidebarContainer = styled.div`
   top: 0;
   bottom: 0px;
   border-left: 1px rgba(255,255,255,0.15) solid;
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const Branding = styled.div`
@@ -35,6 +38,7 @@ export const Item = styled.div`
 `;
 
 export const SocialButtonsContainer = styled.div`
+  width: 60px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

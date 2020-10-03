@@ -14,16 +14,37 @@ export const InputForm = styled.div`
   padding: 0px 5px;
 `;
 
-export const Input = styled.div`
+export const InputText = styled.input.attrs({
+  type: 'text',
+})`
   background-color: #d6d9dc;
-  padding: 5px;
+  padding: 10px;
   margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 `;
 
-export const Button = styled(Input)`
+export const InputMessage = styled.textarea`
+  background-color: #d6d9dc;
+  padding: 10px;
+  margin: 5px;
+  height: 200px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+`;
+
+export const Button = styled.input.attrs({
+  type: 'submit',
+})`
   background-color: #e71d36;
   padding: 10px;
   color: white;
+  padding: 10px;
+  margin: 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: max-content;
 `;
 
 export const ContactDetails = styled.div`

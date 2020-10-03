@@ -1,6 +1,6 @@
 import React from 'react';
 import {SectionContainer, SectionTitle, Separator} from '../../Components/StyledMainPage.js';
-import {ContactContainer, InputForm, Input, Button, ContactDetails, Title, Subtitle, Detail} from './StyledContact'
+import {ContactContainer, InputForm, InputText, InputMessage, Button, ContactDetails, Title, Subtitle, Detail} from './StyledContact'
 
 export const Contact = () => {
   return (
@@ -9,11 +9,11 @@ export const Contact = () => {
         <Separator>___</Separator>
         <ContactContainer>
             <InputForm>
-                <Input>Name</Input>
-                <Input>Email</Input>
-                <Input>Phone</Input>
-                <Input>Message</Input>
-                <Button>SEND MESSAGE</Button>
+                <InputText id={'name'} name={'name'} placeholder={'Name'}/>
+                <InputText id={'email'} name={'email'} placeholder={'Email'}/>
+                <InputText id={'phone'} name={'phone'} placeholder={'Phone'}/>
+                <InputMessage id={'message'} name={'message'} placeholder={'Write something'}/>
+                <Button value={'SEND MESSAGE'}/>
             </InputForm>
             <ContactDetails>
                 <Title>Let’s talk</Title>

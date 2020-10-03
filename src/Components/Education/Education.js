@@ -1,6 +1,6 @@
 import React from 'react';
 import {SectionContainer, SectionTitle, Separator} from '../../Components/StyledMainPage.js';
-import {ContentContainer, EducationContainer, EducationItem, EducationDesc, TimelineSeparator, TimelineDot, TimelineConnector, Date, Title, Subtitle, ProgressContainer, ProgressBar} from './StyledEducation';
+import {ContentContainer, EducationContainer, EducationItem, EducationDesc, TimelineSeparator, TimelineDot, TimelineConnector, Date, Title, Subtitle} from './StyledEducation';
 
 export const Education = () => {
     const educationList = [
@@ -26,24 +26,12 @@ export const Education = () => {
         },
     ];
 
-    // window.onscroll = function() {myFunction()};
-    // const myFunction =() => {
-    //     var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-    //     var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    //     var scrolled = (winScroll / height) * 100;
-    //     document.getElementById("myBar").style.height = scrolled + "%";
-    // }
-
   return (
     <SectionContainer id={'Education'}>
         <SectionTitle>Education</SectionTitle>
         <Separator>___</Separator>
         
         <ContentContainer>
-            {/* <ProgressContainer>
-                <ProgressBar id={"myBar"}></ProgressBar>
-            </ProgressContainer> */}
-
             <EducationContainer>
                 { educationList.map((item) => (
                     <EducationItem key={item}>

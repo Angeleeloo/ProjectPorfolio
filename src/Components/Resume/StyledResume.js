@@ -40,11 +40,11 @@ export const TimelineSeparator = styled.div`
 `;
 
 export const TimelineDot = styled.div`
-  height: 10px;
-  width: 10px;
+  height: 8px;
+  width: 8px;
   border-radius: 50%;
   border: 1px solid red;
-  margin: 0px 10px;
+  margin: 0px 11px;
 `;
 
 export const TimelineConnector = styled.div`

@@ -17,12 +17,13 @@ export const Resume = () => {
     useLayoutEffect(() => {
         const topPos = element => element.getBoundingClientRect().top;
         console.log('topPos is ', topPos);
-        const dot1Pos = topPos(dot1.current),
-              dot2Pos = topPos(dot2.current),
-              dot3Pos = topPos(dot3.current),
-              dot4Pos = topPos(dot3.current);
+        // const dot1Pos = topPos(dot1.current),
+        //       dot2Pos = topPos(dot2.current),
+        //       dot3Pos = topPos(dot3.current),
+        //       dot4Pos = topPos(dot3.current);
         const onScroll = () => {
             const scrollPos = window.scrollY + window.innerHeight;
+            //modify trigger when scroll is center screen (window.innerHeight / 2?)
             if (scrollPos > 1660 && scrollPos < 1860) {
                 setDotActive(state => ({ ...state, dot1: true }));
             } else if (scrollPos > 1860 && scrollPos < 2060) {

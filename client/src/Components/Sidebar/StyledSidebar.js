@@ -7,7 +7,7 @@ export const SidebarContainer = styled.div`
   align-content: center;
   background-color: #011627;
   color: white;
-  padding: 40px;
+  padding: 40px 0px;
   position: fixed;
   top: 0;
   bottom: 0px;
@@ -20,6 +20,7 @@ export const SidebarContainer = styled.div`
 export const Branding = styled.div`
   font-size: 20px;
   font-weight: bold;
+  text-align: center;
 `;
 
 export const MenuItems = styled.div`
@@ -32,16 +33,17 @@ export const MenuItems = styled.div`
 export const Item = styled.div`
   font-size: 16px;
   cursor: pointer;
+  padding: 0px 50px;
+  border-left: solid red;
   &:hover {
     color: rgba(255,255,255,.4);
   }
 `;
 
 export const SocialButtonsContainer = styled.div`
-  width: 60px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
 `;
 
 export const ButtonLink = styled.a`

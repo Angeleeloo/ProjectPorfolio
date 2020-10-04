@@ -12,11 +12,12 @@ export const Sidebar = () => {
   return (
     <SidebarContainer>
         <Branding>
-            <div>AA | Developer</div>
+            <div>AA</div>
         </Branding>
         <MenuItems>
             { sidebarItems.map((item) => (
-              <Item key={item} selectedItem={selectedItem} onClick={() => scrollToSection(item)}>{item}</Item>
+              <Item key={item} selectedItem={selectedItem} onClick={() => scrollToSection(item)} 
+              style={{borderLeft: selectedItem === item ? 'solid red' : 'none'}}>{item}</Item>
             ))}
         </MenuItems>
         <SocialButtonsContainer>

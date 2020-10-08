@@ -11,10 +11,8 @@ export const Contact = () => {
   }
   const handleSubmit = e => {
     e.preventDefault()
-    //destructure from inputs 
     const {name,email,phone,message} = inputs
     axios.post('/sendtome', {
-      //make an object to be handled from req.body on the backend. 
       name,
       email,
       phone,
@@ -36,7 +34,7 @@ export const Contact = () => {
             </InputForm>
             <ContactDetails>
                 <Title>Let’s talk</Title>
-                <Subtitle>Got an offer? Wanna collaborate?</Subtitle>
+                <Subtitle>Wanna collaborate? Got an offer?</Subtitle>
                 <Detail href={'tel:+972-54-544-3223'}>P - +972-54-544-3223</Detail>
                 <Detail href={'mailto:angelica.avm@gmail.com'}>E - angelica.avm@gmail.com</Detail>
                 <Detail href={'https://goo.gl/maps/a3mni3CdwYnQPYA29'} target={'_blank'}>A - Tel Aviv, Israel</Detail>

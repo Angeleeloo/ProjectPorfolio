@@ -1,37 +1,34 @@
-import React, { useRef, useState, useLayoutEffect } from 'react';
+import React, { useState, useLayoutEffect } from 'react';
 import {SectionContainer, SectionTitle, Separator} from '../../Components/StyledMainPage.js';
 import {ExperienceContainer, ExperienceItem, ExperienceDesc, Date, Title, Subtitle, TimelineSeparator, TimelineDot, TimelineConnector} from './StyledResume.js';
 
 export const Resume = () => {
-    const dot1 = useRef(null), 
-          dot2 = useRef(null),
-          dot3 = useRef(null),
-          dot4 = useRef(null);
-    const [dotActive, setDotActive] = useState({
-        dot1: false,
-        dot2: false,
-        dot3: false,
-        dot4: false
-    });
+    const [dotActive, setDotActive] = useState([]);
+    // const dot1 = document.getElementById('dot1'), 
+    //       dot2 = document.getElementById('dot2'), 
+    //       dot3 = document.getElementById('dot3'), 
+    //       dot4 = document.getElementById('dot4');
 
     useLayoutEffect(() => {
         const topPos = element => element.getBoundingClientRect().top;
         console.log('topPos is ', topPos);
-        // const dot1Pos = topPos(dot1.current),
-        //       dot2Pos = topPos(dot2.current),
-        //       dot3Pos = topPos(dot3.current),
-        //       dot4Pos = topPos(dot3.current);
+        // const dot1Pos = topPos(dot1),
+        //       dot2Pos = topPos(dot2),
+        //       dot3Pos = topPos(dot3),
+        //       dot4Pos = topPos(dot3);
         const onScroll = () => {
             const scrollPos = window.scrollY + window.innerHeight;
             //modify trigger when scroll is center screen (window.innerHeight / 2?)
-            if (scrollPos > 1660 && scrollPos < 1860) {
-                setDotActive(state => ({ ...state, dot1: true }));
-            } else if (scrollPos > 1860 && scrollPos < 2060) {
-                setDotActive(state => ({ ...state, dot2: true }));
-            } else if (scrollPos > 2060 && scrollPos < 2260) {
-                setDotActive(state => ({ ...state, dot3: true }));
-            } else if (scrollPos > 2260) {
-                setDotActive(state => ({ ...state, dot4: true }));
+            if (scrollPos > 2100 && scrollPos < 2200) {
+                setDotActive( ...dotActive, [1]);
+            } else if (scrollPos > 2200 && scrollPos < 2300) {
+                setDotActive(...dotActive, [2]);
+            } else if (scrollPos > 2300 && scrollPos < 2400) {
+                setDotActive(...dotActive, [3]);
+            } else if (scrollPos > 2400 && scrollPos < 2500) {
+                setDotActive(...dotActive, [4]);
+            } else if (scrollPos > 2500) {
+                setDotActive(...dotActive, [5]);
             }
         };
     
@@ -39,55 +36,65 @@ export const Resume = () => {
         return () => window.removeEventListener("scroll", onScroll);
       }, []);
 
+      const experienceList = [
+            {
+                date: '2018 - PRESENT',
+                profession: 'FrontEnd Developer',
+                company: 'SimilarWeb',
+                jobDesc: `Working with React, Typescript, Flow, Styled Components, Material UI, GA Events, i18n in Webstorm. 
+                    Built responsive web pages for both desktop and mobile.
+                    Familiarity with Redux, Node.js and Express.
+                    CI/CD in Gitlab.
+                    Ran and maintained Java automation on Selenium with VSCode.
+                    Environment deployments made via TeamCity.
+                    Managed tasks in Jira`
+            },
+            {
+                date: '2015 - 2018',
+                profession: 'Scrum Team Leader',
+                company: 'SimilarWeb',
+                jobDesc: `Established and led scrum teams. 
+                    Managed project lifecycle from concept to launch, delivering measurable results. 
+                    Implemented work procedure foundations turning a newly built team into result-oriented pioneers adapted by other teams.`
+            },
+            {
+                date: '2015 - 2018',
+                profession: ' Web QA Engineer',
+                company: 'SimilarWeb',
+                jobDesc: `Created quality guidelines and maintained stability of SimilarWeb’s flagship B2B product.`
+            },
+            {
+                date: '2011 - 2015',
+                profession: 'QA Team Leader',
+                company: 'Viber',
+                jobDesc: `Built and managed several platform teams in Israel and abroad, adjusting together with the company’s quick paced growth from startup to corporate.`
+            },
+            {
+                date: '2010 – 2011',
+                profession: 'Mobile QA Engineer',
+                company: 'Viber',
+                jobDesc: `Defined and developed the QA infrastructure from the ground up.`
+            },
+      ];
+
     return (
     <SectionContainer id={'Resume'}>
         <SectionTitle>Resume</SectionTitle>
         <Separator>___</Separator>
             <ExperienceContainer>
-                <ExperienceItem>
-                    <Date>2018 - PRESENT</Date>
-                    <TimelineSeparator>
-                        <TimelineDot ref={dot1} style={{ backgroundColor: dotActive.dot1 ? 'red' : 'white' }}/>
-                        <TimelineConnector />
-                    </TimelineSeparator> 
+                { experienceList.map((item, index) => (
+                    <ExperienceItem key={index}>
+                        <Date>{item.date}</Date>
+                        <TimelineSeparator>
+                            <TimelineDot id={`dot${index+1}`} style={{ backgroundColor: dotActive.includes(index+1) ? 'red' : 'white' }}/>
+                            <TimelineConnector />
+                        </TimelineSeparator> 
                         <ExperienceDesc>
-                            <Title><b>Developer, B2B team</b> | SimilarWeb</Title>
-                            <Subtitle>Developing, refactoring and fixing web components, mainly in React and Typescript, some in AngularJS legacy code.</Subtitle>
+                            <Title><b>{item.profession}</b> | {item.company}</Title>
+                            <Subtitle>{item.jobDesc}</Subtitle>
                         </ExperienceDesc>
-                </ExperienceItem>
-                <ExperienceItem>
-                    <Date>2015 - 2018</Date>
-                    <TimelineSeparator>
-                    <TimelineDot ref={dot2} style={{ backgroundColor: dotActive.dot2 ? 'red' : 'white' }}/>
-                        <TimelineConnector />
-                    </TimelineSeparator>    
-                        <ExperienceDesc>
-                            <Title><b>Scrum Team Leader</b> & Web QA Engineer | SimilarWeb</Title>
-                            <Subtitle>Established and led scrum teams. Managed project lifecycle from concept to launch, delivering measurable results. Implemented work procedure foundations turning a newly built team into result-oriented pioneers adapted by other teams.</Subtitle>
-                        </ExperienceDesc>
-                </ExperienceItem> 
-                <ExperienceItem>
-                    <Date>2011 - 2015</Date>
-                    <TimelineSeparator>
-                    <TimelineDot ref={dot3} style={{ backgroundColor: dotActive.dot3 ? 'red' : 'white' }}/>
-                        <TimelineConnector />
-                    </TimelineSeparator>
-                        <ExperienceDesc>
-                            <Title><b>QA Team Leader</b> | Viber</Title>
-                            <Subtitle>Built and managed several platform teams in Israel and abroad, adjusting together with the company’s quick paced growth from startup to corporate.</Subtitle>
-                        </ExperienceDesc>
-                </ExperienceItem> 
-                <ExperienceItem>
-                    <Date>2010 – 2011</Date>
-                    <TimelineSeparator>
-                    <TimelineDot ref={dot4} style={{ backgroundColor: dotActive.dot4 ? 'red' : 'white' }}/>
-                        <TimelineConnector />
-                    </TimelineSeparator>    
-                        <ExperienceDesc>
-                            <Title><b>Mobile QA Engineer</b> | Viber</Title>
-                            <Subtitle>Defined and developed the QA infrastructure from the ground up.</Subtitle>
-                        </ExperienceDesc>
-                </ExperienceItem>
+                    </ExperienceItem>
+                ))}
             </ExperienceContainer>
     </SectionContainer>
   );

@@ -30,7 +30,7 @@ sendToMeRouter.post('/', (req,res, next) => {
     const mail = {
       from: process.env.THE_EMAIL,
       to: 'angresivit@gmail.com',
-      subject: 'This is your website mailing you',
+      subject: 'This is your website emailing you',
       text: `
         from: ${req.body.name} 
         email: ${req.body.email}

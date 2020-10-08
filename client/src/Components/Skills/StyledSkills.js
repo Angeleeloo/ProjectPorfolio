@@ -9,7 +9,7 @@ export const SkillsContainer = styled.div`
 export const SkillCard = styled.div`
   background-color: transparent;
   width: 250px;
-  height: 250px;
+  height: 350px;
   border: 1px solid #f1f1f1;
   perspective: 1000px;
 `;
@@ -18,9 +18,9 @@ export const SkillCardInner = styled.div`
   position: relative;
   width: 100%;
   height: 100%;
-  text-align: center;
   transition: transform 0.8s;
   transform-style: preserve-3d;
+  cursor: pointer;
   &:hover{
     transform: rotateY(180deg);
   }
@@ -42,8 +42,9 @@ export const SkillFront = styled.div`
 `;
 
 export const SkillBack = styled(SkillFront)`
+  justify-content: normal;
   font-weight: normal;
-  font-size: 15px;
+  font-size: 14px;
   background-color: #06233B;
   transform: rotateY(180deg);
 `;

@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import {HomeContainer, TopContainer, Text, Name, Profession, DownloadContainer, DownloadItem1, DownloadItem2} from './StyledHome'
+import {HomeContainer, TopContainer, Text, Name, Profession, Quote1, Quote2, DownloadContainer, DownloadItem1, DownloadItem2} from './StyledHome'
 import {Separator} from '../../Components/StyledMainPage.js';
 
 export const Home = () => {
@@ -13,7 +13,7 @@ export const Home = () => {
     const speed = 100;
     const typeWriter =() => {
       if (i < txt.length) {
-        document.getElementById("demo").innerHTML += txt.charAt(i);
+        document.getElementById("name").innerHTML += txt.charAt(i);
         i++;
         setTimeout(typeWriter, speed);
       }
@@ -25,9 +25,11 @@ export const Home = () => {
     <HomeContainer id={'Home'}>
       <TopContainer>
           <Text>Hi, I'm</Text>
-          <Name id={'demo'}/>
+          <Name id={'name'}/>
           <Separator>___</Separator>
           <Profession>Developer</Profession>
+          <Quote1><em>"It always seems impossible until it's done."</em></Quote1>
+          <Quote2>-- Nelson Mandela</Quote2>
       </TopContainer>
       <DownloadContainer>
         <DownloadItem1 href='/Files/Angelica_Angress_CV.pdf' download>DOWNLOAD RESUME</DownloadItem1>

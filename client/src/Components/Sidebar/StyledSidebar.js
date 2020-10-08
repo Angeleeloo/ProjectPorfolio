@@ -34,7 +34,6 @@ export const Item = styled.div`
   font-size: 16px;
   cursor: pointer;
   padding: 0px 50px;
-  border-left: solid red;
   &:hover {
     color: rgba(255,255,255,.4);
   }

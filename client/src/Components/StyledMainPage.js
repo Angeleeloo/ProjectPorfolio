@@ -79,7 +79,7 @@ export const ScrollToTopIcon = styled.img`
 `;
 
 export const SectionContainer = styled.div`
-  padding: 50px;
+  padding: 80px;
   border-bottom: 1px solid #bbb;
 `;
 

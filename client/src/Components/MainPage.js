@@ -14,7 +14,7 @@ export const MainPage = () => {
   const [displayState, setdisplayState] = useState(false);
   window.onscroll = () => {scrollFunction()};
   const scrollFunction = () => {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    if (document.body.scrollTop > 450 || document.documentElement.scrollTop > 450) {
       setdisplayState(true);
     } else {
       setdisplayState(false);

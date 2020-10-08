@@ -10,7 +10,7 @@ export const TopContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 300px;
+  height: 500px;
   margin: 50px;
 `;
 
@@ -28,6 +28,17 @@ export const Name = styled.h1`
 
 export const Profession = styled(Text)`
   color: #757575;
+`;
+
+export const Quote1 = styled(Profession)`
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+`;
+
+export const Quote2 = styled(Profession)`
+  display: flex;
+  justify-content: center;
 `;
 
 export const DownloadContainer = styled.div`

@@ -4,7 +4,7 @@ export const SkillsContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  @media screen and (max-width: 797px) {
+  @media screen and (max-width: 1023px) {
     flex-direction: column;
     align-items: center;
   }
@@ -16,7 +16,7 @@ export const SkillCard = styled.div`
   height: 350px;
   border: 1px solid #f1f1f1;
   perspective: 1000px;
-  @media screen and (max-width: 797px) {
+  @media screen and (max-width: 1023px) {
     width: 100%;
     height: 250px;
   }

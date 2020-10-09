@@ -35,7 +35,7 @@ export const Quote1 = styled(Profession)`
   display: flex;
   justify-content: center;
   padding-top: 100px;
-  @media screen and (max-width: 797px) {
+  @media screen and (max-width: 1023px) {
     text-align: center;
   }
 `;
@@ -63,7 +63,7 @@ export const DownloadItem1 = styled.a`
   letter-spacing: 0.25px;
   background-color: #e71d36;
   padding: 23px 0px 21px 0px;
-  @media screen and (max-width: 797px) {
+  @media screen and (max-width: 1023px) {
     font-size: 12px;
   }
 `;

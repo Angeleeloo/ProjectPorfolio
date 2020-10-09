@@ -13,7 +13,14 @@ export const SidebarContainer = styled.div`
   bottom: 0px;
   border-left: 1px rgba(255,255,255,0.15) solid;
   @media (max-width: 768px) {
-    display: none;
+    flex-direction: row;
+    top: auto;
+    bottom: auto;
+    padding: 10px;
+    overflow: hidden;
+    position: fixed;
+    width: -webkit-fill-available;
+    z-index: 1;
   }
 `;
 
@@ -28,6 +35,27 @@ export const MenuItems = styled.div`
   flex-direction: column;
   justify-content: space-between;
   height: 250px;
+  @media (max-width: 768px) {
+    display: ${({mobileMenuDisplay}) => mobileMenuDisplay ? 'flex' : 'none'};
+    position: fixed;
+    background-color: #011627;
+    top: 49px;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    padding: 20px 0px;
+  }
+`;
+
+export const HamburgerIcon = styled.div`
+  cursor: pointer;
+`;
+
+export const HamburgerStrip = styled.div`
+  width: 20px;
+  height: 3px;
+  background-color: white;
+  margin: 5px;
 `;
 
 export const Item = styled.div`

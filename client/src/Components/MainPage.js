@@ -33,6 +33,7 @@ export const MainPage = () => {
     <Fragment>
         { isMobile ?
             <div style={{ width: '100%' }}>
+                <Sidebar isMobile={isMobile}/>
                 <Home isMobile={isMobile}/>
                 <About/>
                 <Skills/>

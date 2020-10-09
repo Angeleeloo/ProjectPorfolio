@@ -24,6 +24,7 @@ export const Name = styled.h1`
   font-size: 60px;
   font-weight: bold;
   color: black;
+  line-height: 1;
 `;
 
 export const Profession = styled(Text)`
@@ -34,6 +35,9 @@ export const Quote1 = styled(Profession)`
   display: flex;
   justify-content: center;
   padding-top: 100px;
+  @media screen and (max-width: 797px) {
+    text-align: center;
+  }
 `;
 
 export const Quote2 = styled(Profession)`
@@ -59,6 +63,9 @@ export const DownloadItem1 = styled.a`
   letter-spacing: 0.25px;
   background-color: #e71d36;
   padding: 23px 0px 21px 0px;
+  @media screen and (max-width: 797px) {
+    font-size: 12px;
+  }
 `;
 
 export const DownloadItem2 = styled(DownloadItem1)`

@@ -1,6 +1,6 @@
 import React, { useState, useLayoutEffect } from 'react';
 import {SectionContainer, SectionTitle, Separator} from '../../Components/StyledMainPage.js';
-import {ContentContainer, EducationContainer, EducationItem, EducationDesc, TimelineSeparator, TimelineDot, TimelineConnector, Date, Title, Subtitle} from './StyledEducation';
+import {EducationContainer, EducationItem, EducationDesc, TimelineSeparator, TimelineDot, TimelineConnector, Date, Title, Subtitle} from './StyledEducation';
 
 export const Education = () => {
     const [dotActive, setDotActive] = useState([]);
@@ -8,8 +8,6 @@ export const Education = () => {
     useLayoutEffect(() => {
         const onScroll = () => {
             const scrollPos = window.scrollY + window.innerHeight;
-            console.log('scrollPos is ', scrollPos);
-
             if (scrollPos > 2700 && scrollPos < 2800) {
                 setDotActive( ...dotActive, [1]);
             } else if (scrollPos > 2800 && scrollPos < 2900) {
@@ -52,8 +50,6 @@ export const Education = () => {
     <SectionContainer id={'Education'}>
         <SectionTitle>Education</SectionTitle>
         <Separator>___</Separator>
-        
-        <ContentContainer>
             <EducationContainer>
                 { educationList.map((item, index) => (
                     <EducationItem key={index}>
@@ -69,7 +65,6 @@ export const Education = () => {
                     </EducationItem>
                 ))}
             </EducationContainer>
-        </ContentContainer>    
     </SectionContainer>
   );
 };

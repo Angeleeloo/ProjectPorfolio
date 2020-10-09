@@ -81,6 +81,9 @@ export const ScrollToTopIcon = styled.img`
 export const SectionContainer = styled.div`
   padding: 80px;
   border-bottom: 1px solid #bbb;
+  @media screen and (max-width: 797px) {
+    padding: 80px 20px;
+  }
 `;
 
 export const SectionTitle = styled.h2`

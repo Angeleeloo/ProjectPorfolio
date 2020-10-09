@@ -4,6 +4,12 @@ export const LanguagesContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  @media screen and (max-width: 797px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 190px;
+  }
 `;
 
 export const Language = styled.div`
@@ -42,5 +48,8 @@ export const LanguageWrapper = styled.div`
   width: 49%;
   &:hover ${Overlay} {
     opacity: 1;
+  }
+  @media screen and (max-width: 797px) {
+    width: 100%;
   }
 `;

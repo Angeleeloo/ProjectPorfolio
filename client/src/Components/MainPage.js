@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { Fragment, useState } from 'react';
 import {MainContainer, LeftPane, RightPane, ContentContainer, ScrollToTopButton, ScrollToTopIcon} from './StyledMainPage';
 import {Sidebar} from './Sidebar/Sidebar';
 import {Home} from './Home/Home';
@@ -25,14 +25,15 @@ export const MainPage = () => {
     document.documentElement.scrollTop = 0;
   }
 
+  const isAndroid = navigator.userAgent.includes('Android');
+  const isiPhone = navigator.userAgent.includes('iPhone');
+  const isMobile = isAndroid || isiPhone;
+
   return (
-    <MainContainer>
-        <LeftPane>
-            <Sidebar/>
-        </LeftPane>
-        <RightPane>
-            <ContentContainer>
-                <Home/>
+    <Fragment>
+        { isMobile ?
+            <div style={{ width: '100%' }}>
+                <Home isMobile={isMobile}/>
                 <About/>
                 <Skills/>
                 <Resume/>
@@ -40,12 +41,30 @@ export const MainPage = () => {
                 <Languages/>
                 <Contact/>
                 <Footer/>
-            </ContentContainer>
-        </RightPane>
-        <ScrollToTopButton displayState={displayState} onClick={scrollToTop}>
-            Scroll to top <ScrollToTopIcon src={'./Images/arrow-up.svg'}/>
-        </ScrollToTopButton>
-    </MainContainer>
+            </div>
+            :
+            <MainContainer>
+                <LeftPane>
+                    <Sidebar/>
+                </LeftPane>
+                <RightPane>
+                    <ContentContainer>
+                        <Home/>
+                        <About/>
+                        <Skills/>
+                        <Resume/>
+                        <Education/>
+                        <Languages/>
+                        <Contact/>
+                        <Footer/>
+                    </ContentContainer>
+                </RightPane>
+                <ScrollToTopButton displayState={displayState} onClick={scrollToTop}>
+                    Scroll to top <ScrollToTopIcon src={'./Images/arrow-up.svg'}/>
+                </ScrollToTopButton>
+            </MainContainer>
+        }
+    </Fragment>
   );
 }
 

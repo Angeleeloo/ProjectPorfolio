@@ -31,6 +31,7 @@ export const Contact = () => {
                 <InputText placeholder={'Phone'} name={'phone'} value={inputs.phone} onChange={handleChange} />
                 <InputMessage placeholder={'Write something'} name={'message'} value={inputs.message} onChange={handleChange} cols="30" rows="10"/>
                 <Button value={'SEND MESSAGE'}/>
+                {/* show snackbar with message sent status (success or fail) */}
             </InputForm>
             <ContactDetails>
                 <Title>Let’s talk</Title>

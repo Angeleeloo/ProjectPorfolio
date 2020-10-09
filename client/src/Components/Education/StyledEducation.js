@@ -1,10 +1,5 @@
 import styled from 'styled-components';
 
-export const ContentContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-`;
-
 export const EducationContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -31,7 +26,7 @@ export const Date = styled.div`
   color: #757575;
   font-size: 15px;
   line-height: 20px;
-  width: 150px;
+  width: 170px;
   text-align: end;
 `;
 

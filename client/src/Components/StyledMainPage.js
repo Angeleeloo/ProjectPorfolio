@@ -24,7 +24,7 @@ export const ContentContainer = styled.div`
   flex-direction: column;
   justify-content: space-between;
   background-color: white;
-  width: 800px;
+  max-width: 800px;
   margin-left: 30px;
   min-height: 100vh;
   padding-top: 30px;

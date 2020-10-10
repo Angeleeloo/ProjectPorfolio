@@ -24,10 +24,7 @@ export const MainPage = () => {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   }
-
-  const isAndroid = navigator.userAgent.includes('Android');
-  const isiPhone = navigator.userAgent.includes('iPhone');
-  const isMobile = isAndroid || isiPhone;
+  const isMobile = window.innerWidth < 1023;
 
   return (
     <Fragment>

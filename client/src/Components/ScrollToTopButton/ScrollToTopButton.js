@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ReactGA from 'react-ga';
 import {StyledScrollToTopButton, ScrollToTopIcon} from './StyledScrollToTopButton';
 
 export const ScrollToTopButton = () => {
@@ -11,13 +12,14 @@ export const ScrollToTopButton = () => {
             setdisplayState(false);
           }
         }
-    const scrollToTop = () => {
+    const scrollToTop = (fromScrollPosition) => {
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
-        }
+        ReactGA.event({ category: 'ScrollToTopButton', action: 'Button_clicked', label: 'From_Scroll_Position_' + fromScrollPosition });
+    }
 
     return (
-        <StyledScrollToTopButton displayState={displayState} onClick={scrollToTop}>
+        <StyledScrollToTopButton displayState={displayState} onClick={() => scrollToTop(window.scrollY.toString())}>
             Scroll to top <ScrollToTopIcon src={'./Images/arrow-up.svg'}/>
         </StyledScrollToTopButton>
     )

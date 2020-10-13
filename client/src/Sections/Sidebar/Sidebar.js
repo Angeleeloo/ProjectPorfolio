@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ReactGA from 'react-ga';
 import { HamburgerStrip1, HamburgerStrip2, HamburgerStrip3 } from '../../Components/HamburgerMenu/StyledHamburgerMenu';
 import {SidebarContainer, Branding, MenuItems, Item, HamburgerIcon, SocialButtonsContainer, ButtonLink, SocialButton} from './StyledSidebar'
 import {isMobile} from '../../Common/utils';
@@ -12,7 +13,11 @@ export const Sidebar = () => {
     setSelectedItem(section);
   };
   const toggleMenu = () => { setMobileMenuDisplay(!mobileMenuDisplay)} ;
-  const scrollAndClose = (section) => { scrollToSection(section); toggleMenu() };
+  const scrollAndClose = (section) => { 
+      scrollToSection(section); 
+      toggleMenu();
+      ReactGA.event({ category: 'Sidebar', action: 'Menu_clicked', label: section });
+    };
 
   return (
     <SidebarContainer>

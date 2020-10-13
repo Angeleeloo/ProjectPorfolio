@@ -45,7 +45,7 @@ export const SkillFront = styled.div`
   align-items: center;
   justify-content: center;
   font-weight: bold;
-  font-size: 21px;
+  font-size: 18px;
   background-color: #e71d36;
 `;
 

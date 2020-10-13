@@ -1,14 +1,16 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import {SectionContainer, SectionTitle, Separator} from './StyledSection';
 
+export const Section = (props) => {
+  const {title, children} = props;
 
-export const Section = () => {
   return (
-    <Container>
-        <Title>title={title}</Title>
-        <Separator/>
-        <Content>
+    <SectionContainer id={title}>
+        <SectionTitle>{title}</SectionTitle>
+        <Separator>___</Separator>
+        <Fragment>
             {children}
-        </Content>
-    </Container>
+        </Fragment>
+    </SectionContainer>
   );
 };

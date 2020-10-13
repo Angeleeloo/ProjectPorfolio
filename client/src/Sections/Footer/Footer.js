@@ -1,11 +1,11 @@
 import React from 'react';
-import {SectionContainer} from '../StyledMainPage.js';
+import {Section} from '../../HOCs/Section/Section.js';
 import {FooterContainer, SocialButtonsContainer, ButtonLink, SocialButton} from './StyledFooter';
 
 
 export const Footer = () => {
   return (
-    <SectionContainer id={'Footer'}>
+    <Section id={'Footer'}>
         <FooterContainer>
             <div>
                 @ 2020 Angeleeloo
@@ -19,6 +19,6 @@ export const Footer = () => {
                 </ButtonLink>        
             </SocialButtonsContainer>
         </FooterContainer>
-    </SectionContainer>
+    </Section>
   );
 };

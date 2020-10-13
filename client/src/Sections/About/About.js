@@ -1,14 +1,13 @@
 import React from 'react';
-import {SectionContainer, SectionTitle, Separator} from '../../Components/StyledMainPage.js';
+import {Section} from '../../HOCs/Section/Section.js';
 
 export const About = () => {
   return (
-    <SectionContainer id={'About'}>
-        <SectionTitle>About</SectionTitle>
-        <Separator>___</Separator>
+    <Section id={'About'} title={'About'}>
         <div>
-            A delivery and results oriented Team Leader with 8 years of experience in leading multidisciplinary engineering teams, focusing on collaboration with cross-functional disciplines within and outside the team. Some might call me a “Jira wizard”.
+            A delivery and results oriented Team Leader with 8 years of experience in leading multidisciplinary 
+            engineering teams, focusing on collaboration with cross-functional disciplines within and outside the team.
         </div>
-    </SectionContainer>
+    </Section>
   );
 };

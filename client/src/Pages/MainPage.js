@@ -1,31 +1,18 @@
-import React, { Fragment, useState } from 'react';
-import {MainContainer, LeftPane, RightPane, ContentContainer, ScrollToTopButton, ScrollToTopIcon} from './StyledMainPage';
-import {Sidebar} from './Sidebar/Sidebar';
-import {Home} from './Home/Home';
-import {About} from './About/About';
-import {Resume} from './Resume/Resume';
-import {Skills} from './Skills/Skills';
-import {Education} from './Education/Education';
-import {Languages} from './Languages/Languages';
-import {Contact} from './Contact/Contact';
-import {Footer} from './Footer/Footer';
+import React, { Fragment } from 'react';
+import {MainContainer, LeftPane, RightPane, ContentContainer} from './StyledMainPage';
+import {Sidebar} from '../Sections/Sidebar/Sidebar';
+import {Home} from '../Sections/Home/Home';
+import {About} from '../Sections/About/About';
+import {Resume} from '../Sections/Resume/Resume';
+import {Skills} from '../Sections/Skills/Skills';
+import {Education} from '../Sections/Education/Education';
+import {Languages} from '../Sections/Languages/Languages';
+import {Contact} from '../Sections/Contact/Contact';
+import {Footer} from '../Sections/Footer/Footer';
+import {ScrollToTopButton} from '../Components/ScrollToTopButton/ScrollToTopButton';
+import {isMobile} from '../Common/utils';
 
 export const MainPage = () => {
-  const [displayState, setdisplayState] = useState(false);
-  window.onscroll = () => {scrollFunction()};
-  const scrollFunction = () => {
-    if (document.body.scrollTop > 450 || document.documentElement.scrollTop > 450) {
-      setdisplayState(true);
-    } else {
-      setdisplayState(false);
-    }
-  }
-  const scrollToTop = () => {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-  }
-  const isMobile = window.innerWidth < 1023;
-
   return (
     <Fragment>
         { isMobile ?
@@ -57,9 +44,7 @@ export const MainPage = () => {
                         <Footer/>
                     </ContentContainer>
                 </RightPane>
-                <ScrollToTopButton displayState={displayState} onClick={scrollToTop}>
-                    Scroll to top <ScrollToTopIcon src={'./Images/arrow-up.svg'}/>
-                </ScrollToTopButton>
+                <ScrollToTopButton />
             </MainContainer>
         }
     </Fragment>

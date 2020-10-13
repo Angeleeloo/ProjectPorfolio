@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { HamburgerStrip1, HamburgerStrip2, HamburgerStrip3 } from '../../Component/HamburgerMenu/StyledHamburgerMenu';
-import {SidebarContainer, Branding, MenuItems, Item, HamburgerIcon, HamburgerStrip, SocialButtonsContainer, ButtonLink, SocialButton} from './StyledSidebar'
+import { HamburgerStrip1, HamburgerStrip2, HamburgerStrip3 } from '../../Components/HamburgerMenu/StyledHamburgerMenu';
+import {SidebarContainer, Branding, MenuItems, Item, HamburgerIcon, SocialButtonsContainer, ButtonLink, SocialButton} from './StyledSidebar'
+import {isMobile} from '../../Common/utils';
 
-export const Sidebar = (props) => {
+export const Sidebar = () => {
   const sidebarItems = ['Home', 'About', 'Skills', 'Resume', 'Education', 'Languages', 'Contact'];
   const [selectedItem, setSelectedItem] = useState('Home');
   const [mobileMenuDisplay, setMobileMenuDisplay] = useState(false);
@@ -15,16 +16,14 @@ export const Sidebar = (props) => {
 
   return (
     <SidebarContainer>
-        <Branding onClick={() => scrollToSection('Home')} >
-            <div>AA</div>
-        </Branding>
+        <Branding onClick={() => scrollToSection('Home')}>AA</Branding>
         <MenuItems mobileMenuDisplay={mobileMenuDisplay}>
             { sidebarItems.map((item) => (
                 <Item key={item} selectedItem={selectedItem} onClick={() => scrollAndClose(item)} 
                 style={{borderLeft: selectedItem === item ? 'solid red' : 'none'}}>{item}</Item>
             ))}
         </MenuItems>
-        { props.isMobile ?
+        { isMobile ?
             <HamburgerIcon onClick={() => setMobileMenuDisplay(!mobileMenuDisplay)}>
                 <HamburgerStrip1 iconAnimation={mobileMenuDisplay}/>
                 <HamburgerStrip2 iconAnimation={mobileMenuDisplay}/>

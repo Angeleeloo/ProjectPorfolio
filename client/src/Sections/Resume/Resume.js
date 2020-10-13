@@ -1,5 +1,5 @@
 import React, { useState, useLayoutEffect } from 'react';
-import {SectionContainer, SectionTitle, Separator} from '../../Components/StyledMainPage.js';
+import {Section} from '../../HOCs/Section/Section.js';
 import {ExperienceContainer, ExperienceItem, ExperienceDesc, Date, Title, Subtitle, TimelineSeparator, TimelineDot, TimelineConnector} from './StyledResume.js';
 
 export const Resume = () => {
@@ -78,9 +78,7 @@ export const Resume = () => {
       ];
 
     return (
-    <SectionContainer id={'Resume'}>
-        <SectionTitle>Resume</SectionTitle>
-        <Separator>___</Separator>
+    <Section title={'Resume'}>
             <ExperienceContainer>
                 { experienceList.map((item, index) => (
                     <ExperienceItem key={index}>
@@ -96,6 +94,6 @@ export const Resume = () => {
                     </ExperienceItem>
                 ))}
             </ExperienceContainer>
-    </SectionContainer>
+    </Section>
   );
 };

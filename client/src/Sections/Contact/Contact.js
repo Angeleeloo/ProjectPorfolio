@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import axios from 'axios';
-import {SectionContainer, SectionTitle, Separator} from '../../Components/StyledMainPage.js';
+import {Section} from '../../HOCs/Section/Section.js';
 import {ContactContainer, InputForm, InputText, InputMessage, Button, ContactDetails, Title, Subtitle, Detail} from './StyledContact'
 
 export const Contact = () => {
@@ -21,9 +21,7 @@ export const Contact = () => {
   }
 
   return (
-    <SectionContainer id={'Contact'}>
-        <SectionTitle>Contact</SectionTitle>
-        <Separator>___</Separator>
+    <Section id={'Contact'} title={'Contact'}>
         <ContactContainer>
             <InputForm onSubmit={handleSubmit}>
                 <InputText placeholder={'Name'} name={'name'} value={inputs.name} onChange={handleChange}/>
@@ -41,6 +39,6 @@ export const Contact = () => {
                 <Detail href={'https://goo.gl/maps/a3mni3CdwYnQPYA29'} target={'_blank'}>A - Tel Aviv, Israel</Detail>
             </ContactDetails>
         </ContactContainer>
-    </SectionContainer>
+    </Section>
   );
 };

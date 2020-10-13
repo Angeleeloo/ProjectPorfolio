@@ -1,5 +1,5 @@
 import React from 'react';
-import {SectionContainer, SectionTitle, Separator} from '../../Components/StyledMainPage.js';
+import {Section} from '../../HOCs/Section/Section.js';
 import {SkillsContainer, SkillCard, SkillCardInner, SkillFront, SkillBack} from './StyledSkills.js';
 
 export const Skills = () => {
@@ -34,9 +34,7 @@ export const Skills = () => {
     ];
 
   return (
-    <SectionContainer id={'Skills'}>
-        <SectionTitle>Skills</SectionTitle>
-        <Separator>___</Separator>
+    <Section id={'Skills'} title={'Skills'}>
         <SkillsContainer>
             { skillsList.map((item, index) => (
                 <SkillCard key={index}>
@@ -56,6 +54,6 @@ export const Skills = () => {
                 </SkillCard>
             ))}
         </SkillsContainer>
-    </SectionContainer>
+    </Section>
   );
 };

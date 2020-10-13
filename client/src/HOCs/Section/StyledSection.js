@@ -1,25 +1,20 @@
 import styled from 'styled-components';
 
-export const HeaderContainer = styled.div`
-  border: 1px solid;
-  width: 100%;
-  height: 50px;
+export const SectionContainer = styled.div`
+  padding: 80px;
+  border-bottom: 1px solid #bbb;
+  @media screen and (max-width: 1023px) {
+    padding: 80px 20px;
+  }
 `;
 
-export const Name = styled.div`
-  border: 1px solid;
-  width: 100%;
-  height: 50px;
+export const SectionTitle = styled.h2`
+  font-size: 40px;
+  margin: 0px;
+  color: #151b25;
 `;
 
-export const Home = styled.div`
-  border: 1px solid;
-  width: 100%;
-  height: 50px;
-`;
-
-export const Intro = styled.div`
-  border: 1px solid;
-  width: 100%;
-  height: 50px;
+export const Separator = styled.div`
+  color: #e71d36;
+  margin-bottom: 20px;
 `;

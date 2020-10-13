@@ -1,12 +1,10 @@
 import React from 'react';
-import {SectionContainer, SectionTitle, Separator} from '../../Components/StyledMainPage.js';
+import {Section} from '../../HOCs/Section/Section.js';
 import {LanguagesContainer, LanguageWrapper, Language, Overlay} from './StyledLanguages'
 
 export const Languages = () => {
   return (
-    <SectionContainer id={'Languages'}>
-        <SectionTitle>Languages</SectionTitle>
-        <Separator>___</Separator>
+    <Section title={'Languages'}>
         <LanguagesContainer>
             <LanguageWrapper>
                 <Language>English<br/>Mother tongue</Language>
@@ -17,6 +15,6 @@ export const Languages = () => {
                   <Overlay>אהלן!</Overlay>
             </LanguageWrapper>                     
         </LanguagesContainer>
-    </SectionContainer>
+    </Section>
   );
 };

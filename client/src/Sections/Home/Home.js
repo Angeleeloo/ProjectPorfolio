@@ -1,8 +1,9 @@
 import React, {useEffect} from 'react';
 import {HomeContainer, TopContainer, Text, Name, Profession, Quote1, Quote2, DownloadContainer, DownloadItem1, DownloadItem2} from './StyledHome'
-import {Separator} from '../../Components/StyledMainPage.js';
+import {Separator} from '../../HOCs/Section/StyledSection';
+import {isMobile} from '../../Common/utils';
 
-export const Home = (props) => {
+export const Home = () => {
   const scrollToSection = (section) => {
     document.getElementById(section).scrollIntoView({behavior: "smooth", block: "start", inline: "center"});
   };
@@ -28,7 +29,7 @@ export const Home = (props) => {
           <Name id={'name'}/>
           <Separator>___</Separator>
           <Profession>Developer</Profession>
-          { props.isMobile ? 
+          { isMobile ? 
               <Quote1>
                 <em>"It always seems impossible until it's done." -- Nelson Mandela </em>
               </Quote1>

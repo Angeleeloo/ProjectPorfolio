@@ -1,5 +1,5 @@
 import React, { useState, useLayoutEffect } from 'react';
-import {SectionContainer, SectionTitle, Separator} from '../../Components/StyledMainPage.js';
+import {Section} from '../../HOCs/Section/Section.js';
 import {EducationContainer, EducationItem, EducationDesc, TimelineSeparator, TimelineDot, TimelineConnector, Date, Title, Subtitle} from './StyledEducation';
 
 export const Education = () => {
@@ -47,24 +47,22 @@ export const Education = () => {
     ];
 
   return (
-    <SectionContainer id={'Education'}>
-        <SectionTitle>Education</SectionTitle>
-        <Separator>___</Separator>
-            <EducationContainer>
-                { educationList.map((item, index) => (
-                    <EducationItem key={index}>
-                        <Date>{item.date}</Date>
-                        <TimelineSeparator>
-                            <TimelineDot id={`dot${index+1}`} style={{ backgroundColor: dotActive.includes(index+1) ? 'red' : 'white' }}/>
-                            <TimelineConnector />
-                        </TimelineSeparator>
-                        <EducationDesc>
-                            <Title>{item.education}</Title>
-                            <Subtitle>{item.school}</Subtitle>
-                        </EducationDesc>
-                    </EducationItem>
-                ))}
-            </EducationContainer>
-    </SectionContainer>
+    <Section id={'Education'} title={'Education'}>
+        <EducationContainer>
+            { educationList.map((item, index) => (
+                <EducationItem key={index}>
+                    <Date>{item.date}</Date>
+                    <TimelineSeparator>
+                        <TimelineDot id={`dot${index+1}`} style={{ backgroundColor: dotActive.includes(index+1) ? 'red' : 'white' }}/>
+                        <TimelineConnector />
+                    </TimelineSeparator>
+                    <EducationDesc>
+                        <Title>{item.education}</Title>
+                        <Subtitle>{item.school}</Subtitle>
+                    </EducationDesc>
+                </EducationItem>
+            ))}
+        </EducationContainer>
+    </Section>
   );
 };

@@ -29,6 +29,8 @@ export const Branding = styled.div`
   font-size: 20px;
   font-weight: bold;
   text-align: center;
+  text-decoration: underline;
+  cursor: pointer;
 `;
 
 export const MenuItems = styled.div`

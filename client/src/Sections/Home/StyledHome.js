@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { palette, mobileBreakPoint } from '../../Common/theme';
 
 export const HomeContainer = styled.div`
   display: flex;
@@ -16,7 +17,7 @@ export const TopContainer = styled.div`
 
 export const Text = styled.p`
   font-size: 18px;
-  color: #e71d36;
+  color: ${palette.primary};
   margin: 0px;
 `;
 
@@ -35,7 +36,7 @@ export const Quote1 = styled(Profession)`
   display: flex;
   justify-content: center;
   padding-top: 100px;
-  @media screen and (max-width: 1023px) {
+  @media (max-width: ${mobileBreakPoint}) {
     text-align: center;
   }
 `;
@@ -61,9 +62,9 @@ export const DownloadItem1 = styled.a`
   font-size: 14px;
   font-weight: bold;
   letter-spacing: 0.25px;
-  background-color: #e71d36;
+  background-color: ${palette.primary};
   padding: 23px 0px 21px 0px;
-  @media screen and (max-width: 1023px) {
+  @media (max-width: ${mobileBreakPoint}) {
     font-size: 12px;
   }
 `;

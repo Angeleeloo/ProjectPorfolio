@@ -1,5 +1,6 @@
 import React, { useState, useLayoutEffect } from 'react';
 import ReactGA from '../../Common/ga.js';
+import {palette} from '../../Common/theme';
 import {Section} from '../../HOCs/Section/Section.js';
 import {ExperienceContainer, ExperienceItem, ExperienceDesc, Date, Title, Subtitle, TimelineSeparator, TimelineDot, TimelineConnector} from './StyledResume.js';
 
@@ -86,7 +87,7 @@ export const Resume = () => {
                     <ExperienceItem key={index}>
                         <Date>{item.date}</Date>
                         <TimelineSeparator>
-                            <TimelineDot id={`dot${index+1}`} style={{ backgroundColor: dotActive.includes(index+1) ? 'red' : 'white' }}/>
+                            <TimelineDot id={`dot${index+1}`} style={{ backgroundColor: dotActive.includes(index+1) ? `${palette.primary}` : 'white' }}/>
                             <TimelineConnector />
                         </TimelineSeparator> 
                         <ExperienceDesc>

@@ -1,10 +1,11 @@
 import styled from 'styled-components';
+import { palette, mobileBreakPoint } from '../../Common/theme';
 
 export const ContactContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  @media screen and (max-width: 1023px) {
+  @media (max-width: ${mobileBreakPoint}) {
     flex-direction: column;
     justify-content: space-between;
     height: 680px;
@@ -17,7 +18,7 @@ export const InputForm = styled.form`
   justify-content: center;
   width: 100%;
   padding: 0px 5px;
-  @media screen and (max-width: 1023px) {
+  @media (max-width: ${mobileBreakPoint}) {
     width: auto;
   }
 `;
@@ -30,7 +31,7 @@ export const InputText = styled.input.attrs({
   margin: 5px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  @media screen and (max-width: 1023px) {
+  @media (max-width: ${mobileBreakPoint}) {
     margin: 5px 0px;
   }
 `;
@@ -42,7 +43,7 @@ export const InputMessage = styled.textarea`
   height: 200px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  @media screen and (max-width: 1023px) {
+  @media (max-width: ${mobileBreakPoint}) {
     margin: 5px 0px;
   }
 `;
@@ -50,7 +51,7 @@ export const InputMessage = styled.textarea`
 export const Button = styled.input.attrs({
   type: 'submit',
 })`
-  background-color: #e71d36;
+  background-color: ${palette.primary};
   padding: 10px;
   color: white;
   padding: 10px;
@@ -71,7 +72,7 @@ export const ContactDetails = styled.div`
   background-image: url("https://prorez.caliberthemes.com/resume/wp-content/uploads/sites/2/2020/01/contact-address-min.jpg");
   color: white;
   border-radius: 5px;
-  @media screen and (max-width: 1023px) {
+  @media (max-width: ${mobileBreakPoint}) {
     width: auto;
   }
 `;

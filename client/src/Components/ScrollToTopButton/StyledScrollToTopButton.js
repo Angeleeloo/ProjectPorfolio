@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { palette } from '../../Common/theme';
 
 export const StyledScrollToTopButton = styled.div`
   display: ${({ displayState }) => displayState ? 'flex' : 'none'};
@@ -6,17 +7,14 @@ export const StyledScrollToTopButton = styled.div`
   bottom: 20px;
   right: 30px;
   z-index: 99;
-  font-size: 18px;
-  border: none;
-  outline: none;
-  background-color: red;
+  width: 30px;
+  height: 30px;
   color: white;
-  cursor: pointer;
   padding: 15px;
-  border-radius: 4px;
-  scroll-behavior: smooth;
+  cursor: pointer;
+  border-radius: 50%;
   justify-content: center;
-  align-items: center;
+  background-color: ${palette.primary};
   &:hover {
     background-color: #555;
   }

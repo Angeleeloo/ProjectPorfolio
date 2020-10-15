@@ -1,10 +1,11 @@
 import styled from 'styled-components';
+import { palette, mobileBreakPoint } from '../../Common/theme';
 
 export const LanguagesContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  @media screen and (max-width: 1023px) {
+  @media (max-width: ${mobileBreakPoint}) {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
@@ -18,7 +19,7 @@ export const Language = styled.div`
   text-align: center;
   font-weight: bold;
   color: white;
-  background-color: #e71d36;
+  background-color: ${palette.primary};
   padding: 20px;
   &:hover {
     opacity: 1;
@@ -49,7 +50,7 @@ export const LanguageWrapper = styled.div`
   &:hover ${Overlay} {
     opacity: 1;
   }
-  @media screen and (max-width: 1023px) {
+  @media (max-width: ${mobileBreakPoint}) {
     width: 100%;
   }
 `;

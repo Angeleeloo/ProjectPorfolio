@@ -7,7 +7,6 @@ export const Section = (props) => {
   return (
     <SectionContainer id={title}>
         <SectionTitle>{title}</SectionTitle>
-        <Separator>___</Separator>
         <Fragment>
             {children}
         </Fragment>

@@ -20,7 +20,7 @@ export const ScrollToTopButton = () => {
 
     return (
         <StyledScrollToTopButton displayState={displayState} onClick={() => scrollToTop(window.scrollY.toString())}>
-            Scroll to top <ScrollToTopIcon src={'./Images/arrow-up.svg'}/>
+            <ScrollToTopIcon src={'./Images/arrow-up.svg'}/>
         </StyledScrollToTopButton>
     )
 }

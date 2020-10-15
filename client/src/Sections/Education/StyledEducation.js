@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { palette } from '../../Common/theme';
 
 export const EducationContainer = styled.div`
   display: flex;
@@ -43,12 +44,12 @@ export const TimelineDot = styled.div`
   height: 8px;
   width: 8px;
   border-radius: 50%;
-  border: 1px solid red;
+  border: 1px solid ${palette.primary};
   margin: 0px 11px;
 `;
 
 export const TimelineConnector = styled.div`
-  background-color: red;
+    background-color: ${palette.primary};
   width: 1px;
   height: 100%;
   margin: 0px 15px;

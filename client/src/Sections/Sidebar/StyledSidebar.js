@@ -14,7 +14,7 @@ export const SidebarContainer = styled.div`
   top: 0;
   bottom: 0px;
   border-left: 1px rgba(255,255,255,0.15) solid;
-  @media (max-width: 1023px) {
+  @media (max-width: ${mobileBreakPoint}) {
     flex-direction: row;
     top: auto;
     bottom: auto;
@@ -43,7 +43,7 @@ export const MenuItems = styled.div`
   flex-direction: column;
   justify-content: space-between;
   height: 250px;
-  @media (max-width: 1023px) {
+    @media (max-width: ${mobileBreakPoint}) {
     display: flex;
     position: fixed;
     background-color: #011627;

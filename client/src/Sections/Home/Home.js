@@ -29,7 +29,6 @@ export const Home = () => {
       <TopContainer>
           <Text>Hi, I'm</Text>
           <Name id={'name'}/>
-          <Separator>___</Separator>
           <Profession>Developer</Profession>
           { isMobile ? 
               <Quote1>

@@ -4,6 +4,7 @@ import {isMobile} from '../../Common/utils';
 import {SocialButtons} from '../../Components/SocialButtons/SocialButtons';
 import {HamburgerStrip1, HamburgerStrip2, HamburgerStrip3} from '../../Components/HamburgerMenu/StyledHamburgerMenu';
 import {SidebarContainer, Branding, MenuItems, Item, HamburgerIcon} from './StyledSidebar'
+import { palette } from '../../Common/theme';
 
 export const Sidebar = () => {
   const sidebarItems = ['Home', 'About', 'Skills', 'Resume', 'Education', 'Languages', 'Contact'];
@@ -27,7 +28,7 @@ export const Sidebar = () => {
         <MenuItems mobileMenuDisplay={mobileMenuDisplay}>
             { sidebarItems.map((item) => (
                 <Item key={item} selectedItem={selectedItem} onClick={() => scrollAndClose(item)} 
-                style={{borderLeft: selectedItem === item ? 'solid red' : 'none'}}>{item}</Item>
+                style={{borderLeft: selectedItem === item ? `solid ${palette.primary}` : 'none'}}>{item}</Item>
             ))}
         </MenuItems>
         { isMobile ?

@@ -90,7 +90,7 @@ export const Resume = () => {
                             <TimelineConnector />
                         </TimelineSeparator> 
                         <ExperienceDesc>
-                            <Title><b>{item.profession}</b> | {item.company}</Title>
+                            <Title style={{ color: dotActive.includes(index+1) ? `${palette.primary}` : 'black' }}><b>{item.profession}</b> | {item.company}</Title>
                             <Subtitle>{item.jobDesc}</Subtitle>
                         </ExperienceDesc>
                     </ExperienceItem>

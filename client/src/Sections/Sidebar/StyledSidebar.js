@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { SocialButton } from '../../Components/SocialButtons/StyledSocialButtons';
+import { mobileBreakPoint } from '../../Common/theme';
 
 export const SidebarContainer = styled.div`
   display: flex;

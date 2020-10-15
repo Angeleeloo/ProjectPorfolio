@@ -11,5 +11,4 @@ export const palette = {
 // FONT SIZES
 
 // BREAKPOINTS
-
-export const mobileBreakPoint = TBD;
+export const mobileBreakPoint = '1023px';

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { SocialButton } from '../../Components/SocialButtons/StyledSocialButtons';
 
 export const SidebarContainer = styled.div`
   display: flex;
@@ -22,6 +23,9 @@ export const SidebarContainer = styled.div`
     width: -webkit-fill-available;
     z-index: 1;
     align-items: center;
+  }
+  ${SocialButton} {
+    filter: invert(1);
   }
 `;
 
@@ -71,21 +75,4 @@ export const Item = styled.div`
   &:hover {
     color: rgba(255,255,255,.4);
   }
-`;
-
-export const SocialButtonsContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-`;
-
-export const ButtonLink = styled.a`
-  text-decoration: none;
-  &:hover {
-    filter: contrast;
-  }
-`;
-
-export const SocialButton = styled.img`
-  filter: invert(1);  
 `;

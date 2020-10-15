@@ -1,4 +1,5 @@
 import React, { useState, useLayoutEffect } from 'react';
+import ReactGA from '../../Common/ga.js';
 import {Section} from '../../HOCs/Section/Section.js';
 import {EducationContainer, EducationItem, EducationDesc, TimelineSeparator, TimelineDot, TimelineConnector, Date, Title, Subtitle} from './StyledEducation';
 
@@ -10,6 +11,7 @@ export const Education = () => {
             const scrollPos = window.scrollY + window.innerHeight;
             if (scrollPos > 2700 && scrollPos < 2800) {
                 setDotActive( ...dotActive, [1]);
+                ReactGA.event({ category: 'Education', action: 'Dot_active', label: '1' });
             } else if (scrollPos > 2800 && scrollPos < 2900) {
                 setDotActive(...dotActive, [2]);
             } else if (scrollPos > 2900 && scrollPos < 3000) {

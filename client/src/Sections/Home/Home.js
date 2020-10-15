@@ -2,9 +2,11 @@ import React, {useEffect} from 'react';
 import {HomeContainer, TopContainer, Text, Name, Profession, Quote1, Quote2, DownloadContainer, DownloadItem1, DownloadItem2} from './StyledHome'
 import {Separator} from '../../HOCs/Section/StyledSection';
 import {isMobile} from '../../Common/utils';
+import ReactGA from '../../Common/ga';
 
 export const Home = () => {
   const scrollToSection = (section) => {
+    ReactGA.event({ category: 'Home', action: 'Scroll_to_section_clicked', label: section });
     document.getElementById(section).scrollIntoView({behavior: "smooth", block: "start", inline: "center"});
   };
 
@@ -41,7 +43,7 @@ export const Home = () => {
           }
       </TopContainer>
       <DownloadContainer>
-        <DownloadItem1 href='/Files/Angelica_Angress_CV.pdf' download>DOWNLOAD RESUME</DownloadItem1>
+      <DownloadItem1 href='/Files/TBD.pdf' download>DOWNLOAD RESUME</DownloadItem1>
         <DownloadItem2 onClick={() => scrollToSection('Contact')}>CONTACT ME</DownloadItem2>
       </DownloadContainer>
     </HomeContainer>

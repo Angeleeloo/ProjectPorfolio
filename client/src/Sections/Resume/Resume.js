@@ -1,4 +1,5 @@
 import React, { useState, useLayoutEffect } from 'react';
+import ReactGA from '../../Common/ga.js';
 import {Section} from '../../HOCs/Section/Section.js';
 import {ExperienceContainer, ExperienceItem, ExperienceDesc, Date, Title, Subtitle, TimelineSeparator, TimelineDot, TimelineConnector} from './StyledResume.js';
 
@@ -21,6 +22,7 @@ export const Resume = () => {
             //modify trigger when scroll is center screen (window.innerHeight / 2?)
             if (scrollPos > 2100 && scrollPos < 2200) {
                 setDotActive( ...dotActive, [1]);
+                ReactGA.event({ category: 'Resume', action: 'Dot_active', label: '1' });
             } else if (scrollPos > 2200 && scrollPos < 2300) {
                 setDotActive(...dotActive, [2]);
             } else if (scrollPos > 2300 && scrollPos < 2400) {

@@ -1,8 +1,10 @@
 import React from 'react';
+import ReactGA from '../../Common/ga.js';
 import {Section} from '../../HOCs/Section/Section.js';
 import {SkillsContainer, SkillCard, SkillCardInner, SkillFront, SkillBack} from './StyledSkills.js';
 
 export const Skills = () => {
+    const sendGAEvent = (hoveredItem) => { ReactGA.event({ category: 'Skills', action: 'Item_hovered', label: hoveredItem }) };
     const skillsList = [
         {
             title: `Project Manager`,
@@ -38,7 +40,7 @@ export const Skills = () => {
         <SkillsContainer>
             { skillsList.map((item, index) => (
                 <SkillCard key={index}>
-                    <SkillCardInner>
+                    <SkillCardInner onMouseEnter={() => sendGAEvent(item.title)} >
                         <SkillFront>{item.title}</SkillFront>
                         <SkillBack>
                             <ul>

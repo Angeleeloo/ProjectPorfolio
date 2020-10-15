@@ -85,8 +85,10 @@ export const Subtitle = styled.p`
 `;
 
 export const Detail = styled.a`
-  color: #d6d9dc;
   padding: 5px;
+  color: #d6d9dc;
+  cursor: pointer;
+  text-decoration: underline;
 `;
 
 export const Footer = styled.div`

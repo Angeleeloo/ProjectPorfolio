@@ -1,22 +1,24 @@
 import React, { useState } from 'react';
-import ReactGA from 'react-ga';
-import { HamburgerStrip1, HamburgerStrip2, HamburgerStrip3 } from '../../Components/HamburgerMenu/StyledHamburgerMenu';
-import {SidebarContainer, Branding, MenuItems, Item, HamburgerIcon, SocialButtonsContainer, ButtonLink, SocialButton} from './StyledSidebar'
+import ReactGA from '../../Common/ga';
 import {isMobile} from '../../Common/utils';
+import {SocialButtons} from '../../Components/SocialButtons/SocialButtons';
+import {HamburgerStrip1, HamburgerStrip2, HamburgerStrip3} from '../../Components/HamburgerMenu/StyledHamburgerMenu';
+import {SidebarContainer, Branding, MenuItems, Item, HamburgerIcon} from './StyledSidebar'
 
 export const Sidebar = () => {
   const sidebarItems = ['Home', 'About', 'Skills', 'Resume', 'Education', 'Languages', 'Contact'];
   const [selectedItem, setSelectedItem] = useState('Home');
   const [mobileMenuDisplay, setMobileMenuDisplay] = useState(false);
   const scrollToSection = (section) => {
-    document.getElementById(section).scrollIntoView({behavior: "smooth", block: "start", inline: "center"});
-    setSelectedItem(section);
+      ReactGA.event({ category: 'Sidebar', action: 'Branding_clicked', label: section });
+      document.getElementById(section).scrollIntoView({behavior: "smooth", block: "start", inline: "center"});
+      setSelectedItem(section);
   };
   const toggleMenu = () => { setMobileMenuDisplay(!mobileMenuDisplay)} ;
   const scrollAndClose = (section) => { 
+      ReactGA.event({ category: 'Sidebar', action: 'Menu_item_clicked', label: section });
       scrollToSection(section); 
       toggleMenu();
-      ReactGA.event({ category: 'Sidebar', action: 'Menu_clicked', label: section });
     };
 
   return (
@@ -35,14 +37,7 @@ export const Sidebar = () => {
                 <HamburgerStrip3 iconAnimation={mobileMenuDisplay}/>
             </HamburgerIcon>
             :
-            <SocialButtonsContainer>
-                <ButtonLink href={'https://www.linkedin.com/'} target={'_blank'}>
-                    <SocialButton src={'./Images/linkedin.svg'} alt={'linkedin icon'}/>
-                </ButtonLink>
-                <ButtonLink href={'https://github.com/'} target={'_blank'}>
-                    <SocialButton src={'./Images/github.svg'} alt={'linkedin icon'}/>
-                </ButtonLink>        
-            </SocialButtonsContainer>
+            <SocialButtons sourceClick={'Sidebar'}/>
         }
     </SidebarContainer>
   );

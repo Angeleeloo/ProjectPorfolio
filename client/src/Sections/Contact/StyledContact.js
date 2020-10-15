@@ -26,23 +26,29 @@ export const InputForm = styled.form`
 export const InputText = styled.input.attrs({
   type: 'text',
 })`
-  background-color: #d6d9dc;
+  background-color: #ebebeb;
   padding: 10px;
   margin: 5px;
-  border: 1px solid #ccc;
+  border: 1px solid #ebebeb;
   border-radius: 4px;
+  &:focus{
+    background-color: ${palette.lightest};
+  }
   @media (max-width: ${mobileBreakPoint}) {
     margin: 5px 0px;
   }
 `;
 
 export const InputMessage = styled.textarea`
-  background-color: #d6d9dc;
+  background-color: #ebebeb;
   padding: 10px;
   margin: 5px;
   height: 200px;
-  border: 1px solid #ccc;
+  border: 1px solid #ebebeb;
   border-radius: 5px;
+    &:focus{
+    background-color: ${palette.lightest};
+  }
   @media (max-width: ${mobileBreakPoint}) {
     margin: 5px 0px;
   }
@@ -51,7 +57,7 @@ export const InputMessage = styled.textarea`
 export const Button = styled.input.attrs({
   type: 'submit',
 })`
-  background-color: ${palette.primary};
+  background-color: ${palette.light};
   padding: 10px;
   color: white;
   padding: 10px;
@@ -60,6 +66,9 @@ export const Button = styled.input.attrs({
   border-radius: 5px;
   cursor: pointer;
   width: max-content;
+  &:hover {
+    background-color: ${palette.lightest};
+  }
 `;
 
 export const ContactDetails = styled.div`
@@ -69,9 +78,16 @@ export const ContactDetails = styled.div`
   width: 100%;
   padding: 30px;
   border: solid 1px;
-  background-image: url("https://prorez.caliberthemes.com/resume/wp-content/uploads/sites/2/2020/01/contact-address-min.jpg");
+  background-size: cover;
+  background-position: center;
+  background-image: url("https://media.giphy.com/media/dxsoqMClq5jGKlAwXl/giphy.gif");
   color: white;
   border-radius: 5px;
+  &:hover {
+    background-image:
+      linear-gradient(#00000052,#0000007a),
+      url("./Images/contactMeDino.png");
+  }
   @media (max-width: ${mobileBreakPoint}) {
     width: auto;
   }
@@ -82,14 +98,17 @@ export const Title = styled.h2`
 `;
 
 export const Subtitle = styled.p`
-  color: #d6d9dc;
+  color: white;
 `;
 
 export const Detail = styled.a`
   padding: 5px;
-  color: #d6d9dc;
+  color: white;
   cursor: pointer;
   text-decoration: underline;
+  &:hover {
+    color: ${palette.lightest};
+  }
 `;
 
 export const Footer = styled.div`

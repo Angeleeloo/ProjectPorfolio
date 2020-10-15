@@ -42,8 +42,8 @@ export const Home = () => {
           }
       </TopContainer>
       <DownloadContainer>
-      <DownloadItem1 href='/Files/TBD.pdf' download>DOWNLOAD RESUME</DownloadItem1>
-        <DownloadItem2 onClick={() => scrollToSection('Contact')}>CONTACT ME</DownloadItem2>
+          <DownloadItem1 href='/Files/TBD.pdf' download>DOWNLOAD RESUME</DownloadItem1>
+          <DownloadItem2 onClick={() => scrollToSection('Contact')}>CONTACT ME</DownloadItem2>
       </DownloadContainer>
     </HomeContainer>
   );

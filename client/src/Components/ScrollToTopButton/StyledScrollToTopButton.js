@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { palette } from '../../Common/theme';
+import { palette, mobileBreakPoint } from '../../Common/theme';
 
 export const StyledScrollToTopButton = styled.div`
   display: ${({ displayState }) => displayState ? 'flex' : 'none'};
@@ -14,9 +14,14 @@ export const StyledScrollToTopButton = styled.div`
   cursor: pointer;
   border-radius: 50%;
   justify-content: center;
-  background-color: ${palette.primary};
+  background-color: ${palette.light};
   &:hover {
-    background-color: #555;
+    background-color: ${palette.lightest};
+  }
+  @media (max-width: ${mobileBreakPoint}) {
+    opacity: 0.5;
+    padding: 10px;
+    border: 10px solid white;
   }
 `;
 

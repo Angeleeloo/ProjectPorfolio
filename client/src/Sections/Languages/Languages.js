@@ -15,7 +15,7 @@ export const Languages = () => {
             </LanguageWrapper>
             <LanguageWrapper onMouseEnter={() => sendGAEvent('Hebrew')} >
                   <Language>Hebrew<br/>Bilingual proficiency</Language>
-                  <Overlay>אהלן!</Overlay>
+                  <Overlay hebrew>אהלן!</Overlay>
             </LanguageWrapper>                     
         </LanguagesContainer>
     </Section>

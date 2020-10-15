@@ -6,10 +6,11 @@ export const SocialButtonsContainer = styled.div`
   justify-content: space-evenly;
 `;
 
-export const ButtonLink = styled.a`
+export const ButtonLink = styled.div`
+  cursor: pointer;
   text-decoration: none;
   &:hover {
-    filter: contrast;
+    filter: contrast(0.5);
   }
 `;
 

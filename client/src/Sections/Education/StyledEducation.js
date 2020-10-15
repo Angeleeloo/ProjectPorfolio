@@ -44,12 +44,12 @@ export const TimelineDot = styled.div`
   height: 8px;
   width: 8px;
   border-radius: 50%;
-  border: 1px solid ${palette.primary};
+  border: 1px solid ${palette.light};
   margin: 0px 11px;
 `;
 
 export const TimelineConnector = styled.div`
-    background-color: ${palette.primary};
+    background-color: ${palette.light};
   width: 1px;
   height: 100%;
   margin: 0px 15px;

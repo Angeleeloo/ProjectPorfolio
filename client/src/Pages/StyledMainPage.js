@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {palette} from '../Common/theme';
 
 export const MainContainer = styled.div`
   display: flex;
@@ -11,12 +12,12 @@ export const LeftPane = styled.div`
   width: 30%;
   display: flex;
   justify-content: flex-end;
-  background-color: #011627;
+  background-color: ${palette.darkest};
 `;
 
 export const RightPane = styled.div`
   width: 70%;
-  background-color: #334452;
+  background-color: ${palette.dark};
 `;
 
 export const ContentContainer = styled.div`
@@ -31,7 +32,7 @@ export const ContentContainer = styled.div`
   padding-bottom: 30px;
   &:before {
     top: 0;
-    background-color: #334452;
+    background-color: ${palette.dark};
     content: '';
     position: fixed;
     bottom: 0;
@@ -41,7 +42,7 @@ export const ContentContainer = styled.div`
   }
   &:after {
     bottom: 0;
-    background-color: #334452;
+    background-color: ${palette.dark};
     content: '';
     position: fixed;
     bottom: 0;

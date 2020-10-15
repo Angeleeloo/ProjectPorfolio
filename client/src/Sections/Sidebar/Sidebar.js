@@ -28,7 +28,7 @@ export const Sidebar = () => {
         <MenuItems mobileMenuDisplay={mobileMenuDisplay}>
             { sidebarItems.map((item) => (
                 <Item key={item} selectedItem={selectedItem} onClick={() => scrollAndClose(item)} 
-                style={{borderLeft: selectedItem === item ? `solid ${palette.primary}` : 'none'}}>{item}</Item>
+                style={{borderLeft: selectedItem === item ? `solid ${palette.light}` : 'none'}}>{item}</Item>
             ))}
         </MenuItems>
         { isMobile ?

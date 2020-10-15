@@ -47,13 +47,13 @@ export const SkillFront = styled.div`
   justify-content: center;
   font-weight: bold;
   font-size: 18px;
-  background-color: ${palette.primary};
+  background-color: ${palette.light};
 `;
 
 export const SkillBack = styled(SkillFront)`
   justify-content: normal;
-  font-weight: normal;
+  font-weight: bold;
   font-size: 14px;
-  background-color: #06233B;
+  background-color: ${palette.lightest};
   transform: rotateY(180deg);
 `;

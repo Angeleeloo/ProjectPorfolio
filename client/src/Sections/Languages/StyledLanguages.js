@@ -19,7 +19,7 @@ export const Language = styled.div`
   text-align: center;
   font-weight: bold;
   color: white;
-  background-color: ${palette.primary};
+  background-color: ${palette.light};
   padding: 20px;
   &:hover {
     opacity: 1;
@@ -36,8 +36,10 @@ export const Overlay = styled.div`
   width: 100%;
   opacity: 0;
   transition: .5s ease;
-  background-color: #06233B;
-  font-size: 20px;
+  background-position: center;
+  background-size: cover;
+  background-image: url(${props => props.hebrew ? "https://media.giphy.com/media/QB4wuim3QhuohnnliO/giphy-downsized.gif" : "https://media.giphy.com/media/35pTQFiy14OeA/giphy.gif"});
+  font-size: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -46,7 +48,8 @@ export const Overlay = styled.div`
 
 export const LanguageWrapper = styled.div`
   position: relative;
-  width: 49%;
+  width: 49.5%;
+  height: 150px;
   &:hover ${Overlay} {
     opacity: 1;
   }

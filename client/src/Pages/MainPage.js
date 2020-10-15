@@ -26,6 +26,7 @@ export const MainPage = () => {
                 <Languages/>
                 <Contact/>
                 <Footer/>
+                <ScrollToTopButton/>
             </div>
             :
             <MainContainer>
@@ -44,7 +45,7 @@ export const MainPage = () => {
                         <Footer/>
                     </ContentContainer>
                 </RightPane>
-                <ScrollToTopButton />
+                <ScrollToTopButton/>
             </MainContainer>
         }
     </Fragment>

@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 import { SocialButton } from '../../Components/SocialButtons/StyledSocialButtons';
-import { mobileBreakPoint } from '../../Common/theme';
+import { palette, mobileBreakPoint } from '../../Common/theme';
 
 export const SidebarContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-content: center;
-  background-color: #011627;
+  background-color: ${palette.darkest};
   color: white;
   padding: 40px 0px;
   position: fixed;
@@ -36,6 +36,9 @@ export const Branding = styled.div`
   text-align: center;
   text-decoration: underline;
   cursor: pointer;
+  &:hover{
+    color: ${palette.lightest};
+  }
 `;
 
 export const MenuItems = styled.div`
@@ -74,6 +77,6 @@ export const Item = styled.div`
   cursor: pointer;
   padding: 0px 50px;
   &:hover {
-    color: rgba(255,255,255,.4);
+    color: ${palette.lightest};
   }
 `;

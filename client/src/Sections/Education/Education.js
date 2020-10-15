@@ -56,11 +56,11 @@ export const Education = () => {
                 <EducationItem key={index}>
                     <Date>{item.date}</Date>
                     <TimelineSeparator>
-                        <TimelineDot id={`dot${index+1}`} style={{ backgroundColor: dotActive.includes(index+1) ? `${palette.primary}` : 'white' }}/>
+                        <TimelineDot id={`dot${index+1}`} style={{ backgroundColor: dotActive.includes(index+1) ? `${palette.light}` : 'white' }}/>
                         <TimelineConnector />
                     </TimelineSeparator>
                     <EducationDesc>
-                        <Title style={{ color: dotActive.includes(index+1) ? `${palette.primary}` : 'black' }}>{item.education}</Title>
+                        <Title style={{ color: dotActive.includes(index+1) ? `${palette.light}` : 'black' }}>{item.education}</Title>
                         <Subtitle>{item.school}</Subtitle>
                     </EducationDesc>
                 </EducationItem>

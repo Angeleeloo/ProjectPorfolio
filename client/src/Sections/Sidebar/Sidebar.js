@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ReactGA from '../../Common/ga';
+import ReactGA from 'react-ga';
 import {isMobile} from '../../Common/utils';
 import {SocialButtons} from '../../Components/SocialButtons/SocialButtons';
 import {HamburgerStrip1, HamburgerStrip2, HamburgerStrip3} from '../../Components/HamburgerMenu/StyledHamburgerMenu';

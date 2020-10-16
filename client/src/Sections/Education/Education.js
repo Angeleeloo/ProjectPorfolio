@@ -1,5 +1,5 @@
 import React, { useState, useLayoutEffect } from 'react';
-import ReactGA from '../../Common/ga.js';
+import ReactGA from 'react-ga';
 import { palette } from '../../Common/theme.js';
 import {Section} from '../../HOCs/Section/Section.js';
 import {EducationContainer, EducationItem, EducationDesc, TimelineSeparator, TimelineDot, TimelineConnector, Date, Title, Subtitle} from './StyledEducation';

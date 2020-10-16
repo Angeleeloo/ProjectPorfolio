@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import {SectionContainer, SectionTitle, Separator} from './StyledSection';
+import {SectionContainer, SectionTitle} from './StyledSection';
 
 export const Section = (props) => {
   const {title, children} = props;

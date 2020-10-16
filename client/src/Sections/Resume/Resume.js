@@ -1,5 +1,5 @@
 import React, { useState, useLayoutEffect } from 'react';
-import ReactGA from '../../Common/ga.js';
+import ReactGA from 'react-ga';
 import {palette} from '../../Common/theme';
 import {Section} from '../../HOCs/Section/Section.js';
 import {ExperienceContainer, ExperienceItem, ExperienceDesc, Date, Title, Subtitle, TimelineSeparator, TimelineDot, TimelineConnector} from './StyledResume.js';

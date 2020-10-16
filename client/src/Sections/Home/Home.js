@@ -1,8 +1,7 @@
 import React, {useEffect} from 'react';
 import {HomeContainer, TopContainer, Text, Name, Profession, Quote1, Quote2, DownloadContainer, DownloadItem1, DownloadItem2} from './StyledHome'
-import {Separator} from '../../HOCs/Section/StyledSection';
 import {isMobile} from '../../Common/utils';
-import ReactGA from '../../Common/ga';
+import ReactGA from 'react-ga';
 
 export const Home = () => {
   const scrollToSection = (section) => {

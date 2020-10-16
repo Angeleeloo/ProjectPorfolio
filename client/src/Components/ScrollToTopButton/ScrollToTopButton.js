@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ReactGA from '../../Common/ga';
+import ReactGA from 'react-ga';
 import {StyledScrollToTopButton, ScrollToTopIcon} from './StyledScrollToTopButton';
 
 export const ScrollToTopButton = () => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactGA from '../../Common/ga.js';
+import ReactGA from 'react-ga';
 import {Section} from '../../HOCs/Section/Section.js';
 import {SkillsContainer, SkillCard, SkillCardInner, SkillFront, SkillBack} from './StyledSkills.js';
 

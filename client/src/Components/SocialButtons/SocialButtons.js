@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactGA from '../../Common/ga';
+import ReactGA from 'react-ga';
 import {SocialButtonsContainer, ButtonLink, SocialButton} from './StyledSocialButtons';
 
 export const SocialButtons = (props) => {

@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import axios from 'axios';
 import {Section} from '../../HOCs/Section/Section.js';
 import {ContactContainer, InputForm, InputText, InputMessage, Button, ContactDetails, Title, Subtitle, Detail} from './StyledContact'
-import ReactGA from '../../Common/ga.js';
+import ReactGA from 'react-ga';
 
 export const Contact = () => {
   const [inputs, setInputs] = useState({name: '', email: '', phone: '', message: ''});

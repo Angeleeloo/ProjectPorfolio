@@ -31,7 +31,7 @@ export const Home = () => {
           <Profession>Developer</Profession>
           { isMobile ? 
               <Quote1>
-                <em>"It always seems impossible until it's done." -- Nelson Mandela </em>
+                <em>"It always seems impossible until it's done." -- Nelson Mandela</em>
               </Quote1>
           :
               <div>

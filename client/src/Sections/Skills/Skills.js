@@ -1,10 +1,9 @@
 import React from 'react';
-import ReactGA from 'react-ga';
 import {Section} from '../../HOCs/Section/Section.js';
-import {SkillsContainer, SkillCard, SkillCardInner, SkillFront, SkillBack} from './StyledSkills.js';
+import {FlipCard} from '../../Components/FlipCard/FlipCard.js';
+import {SkillsContainer} from './StyledSkills.js';
 
 export const Skills = () => {
-    const sendGAEvent = (hoveredItem) => { ReactGA.event({ category: 'Skills', action: 'Item_hovered', label: hoveredItem }) };
     const skillsList = [
         {
             title: `Project Manager`,
@@ -36,24 +35,20 @@ export const Skills = () => {
     ];
 
   return (
-    <Section id={'Skills'} title={'Skills'}>
+    <Section title={'Skills'}>
         <SkillsContainer>
             { skillsList.map((item, index) => (
-                <SkillCard key={index}>
-                    <SkillCardInner onMouseEnter={() => sendGAEvent(item.title)} >
-                        <SkillFront>{item.title}</SkillFront>
-                        <SkillBack>
-                            <ul>
-                                <li>{item.desc1}</li>
-                                <li>{item.desc2}</li>
-                                <li>{item.desc3}</li>
-                                <li>{item.desc4}</li>
-                                <li>{item.desc5}</li>
-                                <li>{item.desc6}</li>
-                            </ul>
-                        </SkillBack>
-                    </SkillCardInner>
-                </SkillCard>
+                <FlipCard 
+                    key={index} 
+                    title={item.title} 
+                    item1={item.desc1}
+                    item2={item.desc2}
+                    item3={item.desc3}
+                    item4={item.desc4}
+                    item5={item.desc5}
+                    item6={item.desc6}
+                    GACategory={'Skills'}
+                    GAAction={'Item_hovered'}/>
             ))}
         </SkillsContainer>
     </Section>

@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactGA from 'react-ga';
-import {CardContainer, CardIcon, Title, List, ListRow, ListIcon, ListItem} from './SlyedCard';
+import {CardContainer, CardIcon, Title, List, ListRow} from './StyledCard';
 
 export const Card = (props) => {
-    const {cardIcon, title, listIcon, listItem, gaCategory, gaAction} = props;
+    const {cardIcon, title, children, gaCategory, gaAction} = props;
     const sendGAEvent = (hoveredCard) => { ReactGA.event({ category: gaCategory, action: gaAction, label: hoveredCard }) };
 
     return (
@@ -13,10 +13,7 @@ export const Card = (props) => {
                 <Title>{title}</Title>
             </ListRow>
             <List>
-                <ListRow>
-                    <ListIcon src={listIcon}/>
-                    <ListItem>{listItem}</ListItem>
-                </ListRow>
+                {children}
             </List>
         </CardContainer>
     )

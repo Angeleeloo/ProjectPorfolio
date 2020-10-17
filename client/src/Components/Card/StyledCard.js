@@ -4,6 +4,8 @@ import { palette, fontSize } from '../../Common/theme';
 export const CardContainer = styled.div`
     display: flex;
     flex-direction: column;
+    width: 50%;
+    margin: 20px 0px;
 `;
 
 export const CardIcon = styled.img`
@@ -35,5 +37,4 @@ export const ListIcon = styled.img`
 `;
 
 export const ListItem = styled.div`
-    margin: 5px;
 `;

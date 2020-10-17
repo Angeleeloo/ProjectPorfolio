@@ -13,7 +13,6 @@ export const Resume = () => {
 
     useLayoutEffect(() => {
         const topPos = element => element.getBoundingClientRect().top;
-        console.log('topPos is ', topPos);
         // const dot1Pos = topPos(dot1),
         //       dot2Pos = topPos(dot2),
         //       dot3Pos = topPos(dot3),

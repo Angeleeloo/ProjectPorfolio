@@ -4,7 +4,7 @@ import { palette, mobileBreakPoint, fontSize } from '../../Common/theme';
 export const FlipCardContainer = styled.div`
   background-color: transparent;
   width: 49.5%;
-  height: 350px;
+  height: 180px;
   border: 1px solid #f1f1f1;
   perspective: 1000px;
   @media (max-width: ${mobileBreakPoint}) {

@@ -22,6 +22,19 @@ export const Sidebar = () => {
       toggleMenu();
     };
 
+    // useEffect(() => {
+    //     window.addEventListener('scroll', sectionInView);
+    //     return () => window.removeEventListener('scroll', sectionInView);
+    // });    
+
+    // const sectionInView = () => {
+    //     let section = document.getElementById('About');
+    //     let sectionPos = section.getBoundingClientRect().top;
+    //     sectionPos = 0 ? setSelectedItem(section) : null;
+    // }
+
+    // console.log('sectionInView is ', sectionInView);
+
   return (
     <SidebarContainer>
         <Branding onClick={() => scrollToSection('Home')}>AA</Branding>

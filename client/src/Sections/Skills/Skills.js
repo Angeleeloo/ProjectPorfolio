@@ -56,7 +56,7 @@ export const Skills = () => {
                         gaAction={'Item_hovered'} >
                             { item.listItems.map((subitem) => {
                                 return (
-                                    <ListRow>
+                                    <ListRow key={subitem}>
                                         <ListIcon src={'./Images/checkmark-icon.svg'}/>
                                         <ListItem>{subitem}</ListItem>
                                     </ListRow>

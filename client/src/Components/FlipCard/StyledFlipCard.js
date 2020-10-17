@@ -50,5 +50,6 @@ export const FlipCardBack = styled(FlipCardFront)`
   transform: rotateY(180deg);
   background-position: center;
   background-size: cover;
+  text-shadow: 3px 3px ${palette.light};
   background-image: url(${props => props.bgImage});
 `;

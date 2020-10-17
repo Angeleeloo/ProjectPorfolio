@@ -22,8 +22,8 @@ export const Education = () => {
             }
         };
     
-        window.addEventListener("scroll", onScroll);
-        return () => window.removeEventListener("scroll", onScroll);
+        window.addEventListener('scroll', onScroll);
+        return () => window.removeEventListener('scroll', onScroll);
       }, []);
 
     const educationList = [

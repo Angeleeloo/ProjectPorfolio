@@ -1,22 +1,27 @@
 import React from 'react';
-import ReactGA from 'react-ga';
 import {Section} from '../../HOCs/Section/Section.js';
-import {LanguagesContainer, LanguageWrapper, Language, Overlay} from './StyledLanguages'
+import {FlipCard} from '../../Components/FlipCard/FlipCard.js';
+import {LanguagesContainer} from './StyledLanguages'
 
 export const Languages = () => {
-  const sendGAEvent = (hoveredItem) => { ReactGA.event({ category: 'Languages', action: 'Item_hovered', label: hoveredItem }) };
 
   return (
     <Section title={'Languages'}>
-        <LanguagesContainer>
-            <LanguageWrapper onMouseEnter={() => sendGAEvent('English')} >
-                <Language>English<br/>Mother tongue</Language>
-                <Overlay>Howdie!</Overlay>
-            </LanguageWrapper>
-            <LanguageWrapper onMouseEnter={() => sendGAEvent('Hebrew')} >
-                  <Language>Hebrew<br/>Bilingual proficiency</Language>
-                  <Overlay hebrew>אהלן!</Overlay>
-            </LanguageWrapper>                     
+        <LanguagesContainer>            
+            <FlipCard
+                contentFront={'English | Mother tongue'}
+                contentBack={'Howdy!'}
+                GACategory={'Languages'}
+                GAAction={'Item_hovered'}
+                GALabel={'English'}
+                bgImage={'https://media.giphy.com/media/35pTQFiy14OeA/giphy.gif'}/>
+            <FlipCard
+                contentFront={'Hebrew | Bilingual proficiency'}
+                contentBack={'אהלן!'}
+                GACategory={'Skills'}
+                GAAction={'Item_hovered'}
+                GALabel={'Hebrew'}
+                bgImage={'https://media.giphy.com/media/QB4wuim3QhuohnnliO/giphy-downsized.gif'}/>
         </LanguagesContainer>
     </Section>
   );

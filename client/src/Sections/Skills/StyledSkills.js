@@ -4,7 +4,7 @@ import { mobileBreakPoint } from '../../Common/theme';
 export const SkillsContainer = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  flex-wrap: wrap;
   @media (max-width: ${mobileBreakPoint}) {
     flex-direction: column;
     align-items: center;

@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import { palette, mobileBreakPoint } from '../../Common/theme';
+import { palette, mobileBreakPoint, fontSize } from '../../Common/theme';
 
 export const FlipCardContainer = styled.div`
   background-color: transparent;
-  width: 250px;
+  width: 49.5%;
   height: 350px;
   border: 1px solid #f1f1f1;
   perspective: 1000px;
@@ -43,7 +43,12 @@ export const FlipCardFront = styled.div`
 export const FlipCardBack = styled(FlipCardFront)`
   justify-content: normal;
   font-weight: bold;
-  font-size: 14px;
+  text-align: center;
+  justify-content: center;
+  font-size: ${fontSize.title};
   background-color: ${palette.lightest};
   transform: rotateY(180deg);
+  background-position: center;
+  background-size: cover;
+  background-image: url(${props => props.bgImage});
 `;

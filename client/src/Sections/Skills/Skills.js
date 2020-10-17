@@ -1,11 +1,12 @@
 import React from 'react';
 import {Section} from '../../HOCs/Section/Section.js';
-import {FlipCard} from '../../Components/FlipCard/FlipCard.js';
+import {Card} from '../../Components/Card/Card.js';
 import {SkillsContainer} from './StyledSkills.js';
 
 export const Skills = () => {
     const skillsList = [
         {
+            icon: './Images/pm-icon.svg',
             title: `Project Manager`,
             desc1: `Jira expert`,
             desc2: `Scrum, Kanban, sprint & backlog task management`,
@@ -15,6 +16,7 @@ export const Skills = () => {
             desc6: `Roadmaps in Gantt charts`
         },
         {
+            icon: './Images/dev-icon.svg',
             title: `Frontend Developer`,
             desc1: `HTML, CSS, Javascript`,
             desc2: `React, Redux, Webpack, Webstorm`,
@@ -24,6 +26,7 @@ export const Skills = () => {
             desc6: `E2E automation with Selenium`
         },
         {
+            icon: './Images/qa-icon.svg',
             title: `QA Team Leader`,
             desc1: `Web page testing`,
             desc2: `Cross browser validations`,
@@ -37,18 +40,14 @@ export const Skills = () => {
   return (
     <Section title={'Skills'}>
         <SkillsContainer>
-            { skillsList.map((item, index) => (
-                <FlipCard 
-                    key={index} 
-                    title={item.title} 
-                    item1={item.desc1}
-                    item2={item.desc2}
-                    item3={item.desc3}
-                    item4={item.desc4}
-                    item5={item.desc5}
-                    item6={item.desc6}
-                    GACategory={'Skills'}
-                    GAAction={'Item_hovered'}/>
+            { skillsList.map((item) => (
+                <Card
+                    cardIcon={item.icon}
+                    title={item.title}
+                    listIcon={'./Images/checkbox-icon.svg'}
+                    listItem={item.desc1}
+                    gaCategory={'Skills'}
+                    gaAction={'Item_hovered'}/>
             ))}
         </SkillsContainer>
     </Section>

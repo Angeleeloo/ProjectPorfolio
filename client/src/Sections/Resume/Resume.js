@@ -1,42 +1,46 @@
-import React, { useState, useLayoutEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactGA from 'react-ga';
 import {palette} from '../../Common/theme';
 import {Section} from '../../HOCs/Section/Section.js';
 import {ExperienceContainer, ExperienceItem, ExperienceDesc, Date, Title, Subtitle, TimelineSeparator, TimelineDot, TimelineConnector} from './StyledResume.js';
 
 export const Resume = () => {
-    const [dotActive, setDotActive] = useState([]);
-    // const dot1 = document.getElementById('dot1'), 
-    //       dot2 = document.getElementById('dot2'), 
-    //       dot3 = document.getElementById('dot3'), 
-    //       dot4 = document.getElementById('dot4');
+    const [dotActive, setDotActive] = useState();
 
-    useLayoutEffect(() => {
-        const topPos = element => element.getBoundingClientRect().top;
-        // const dot1Pos = topPos(dot1),
-        //       dot2Pos = topPos(dot2),
-        //       dot3Pos = topPos(dot3),
-        //       dot4Pos = topPos(dot3);
-        const onScroll = () => {
-            const scrollPos = window.scrollY + window.innerHeight;
-            //modify trigger when scroll is center screen (window.innerHeight / 2?)
-            if (scrollPos > 2100 && scrollPos < 2200) {
-                setDotActive( ...dotActive, [1]);
-                ReactGA.event({ category: 'Resume', action: 'Dot_active', label: '1' });
-            } else if (scrollPos > 2200 && scrollPos < 2300) {
-                setDotActive(...dotActive, [2]);
-            } else if (scrollPos > 2300 && scrollPos < 2400) {
-                setDotActive(...dotActive, [3]);
-            } else if (scrollPos > 2400 && scrollPos < 2500) {
-                setDotActive(...dotActive, [4]);
-            } else if (scrollPos > 2500) {
-                setDotActive(...dotActive, [5]);
-            }
+    const onScroll = () => {
+        const dot1 = document.getElementById('dot1'),
+              dot2 = document.getElementById('dot2'),
+              dot3 = document.getElementById('dot3'),
+              dot4 = document.getElementById('dot4'),
+              dot5 = document.getElementById('dot5');
+
+        const topPos = (dot) => dot.getBoundingClientRect().top;
+        const dot1Pos = topPos(dot1),
+              dot2Pos = topPos(dot2),
+              dot3Pos = topPos(dot3),
+              dot4Pos = topPos(dot4),
+              dot5Pos = topPos(dot5);
+
+        const centerScreen = window.innerHeight / 2;
+
+        if (dot1Pos >= centerScreen-10 && dot1Pos <= centerScreen+10) {
+            setDotActive(1);
+            ReactGA.event({ category: 'Resume', action: 'Dot_active', label: '1' });
+            } else if (dot2Pos >= centerScreen-10 && dot2Pos <= centerScreen+10) {
+                setDotActive(2);
+            } else if (dot3Pos >= centerScreen-10 && dot3Pos <= centerScreen+10) {
+                setDotActive(3);
+            } else if (dot4Pos >= centerScreen-10 && dot4Pos <= centerScreen+10) {
+                setDotActive(4);
+            } else if (dot5Pos >= centerScreen-10 && dot5Pos <= centerScreen+10) {
+                setDotActive(5);
         };
-    
+    };
+
+    useEffect(() => {   
         window.addEventListener("scroll", onScroll);
         return () => window.removeEventListener("scroll", onScroll);
-      }, []);
+    });
 
       const experienceList = [
             {
@@ -81,21 +85,21 @@ export const Resume = () => {
 
     return (
     <Section title={'Resume'}>
-            <ExperienceContainer>
-                { experienceList.map((item, index) => (
-                    <ExperienceItem key={index}>
-                        <Date>{item.date}</Date>
-                        <TimelineSeparator>
-                            <TimelineDot id={`dot${index+1}`} style={{ backgroundColor: dotActive.includes(index+1) ? `${palette.light}` : 'white' }}/>
-                            <TimelineConnector />
-                        </TimelineSeparator> 
-                        <ExperienceDesc>
-                            <Title style={{ color: dotActive.includes(index+1) ? `${palette.light}` : 'black' }}><b>{item.profession}</b> | {item.company}</Title>
-                            <Subtitle>{item.jobDesc}</Subtitle>
-                        </ExperienceDesc>
-                    </ExperienceItem>
-                ))}
-            </ExperienceContainer>
+        <ExperienceContainer>
+            { experienceList.map((item, index) => (
+                <ExperienceItem key={index}>
+                    <Date>{item.date}</Date>
+                    <TimelineSeparator>
+                        <TimelineDot id={`dot${index+1}`} style={{ backgroundColor: dotActive === index+1 ? `${palette.light}` : 'white' }}/>
+                        <TimelineConnector />
+                    </TimelineSeparator> 
+                    <ExperienceDesc>
+                        <Title style={{ color: dotActive === index+1 ? `${palette.light}` : 'black' }}><b>{item.profession}</b> | {item.company}</Title>
+                        <Subtitle>{item.jobDesc}</Subtitle>
+                    </ExperienceDesc>
+                </ExperienceItem>
+            ))}
+        </ExperienceContainer>
     </Section>
   );
 };

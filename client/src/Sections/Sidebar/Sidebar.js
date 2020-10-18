@@ -23,20 +23,21 @@ export const Sidebar = () => {
 
     const sectionInView = () => {
         
-        const sectionHome = document.getElementById('Home');
-        const sectionHomePos = sectionHome.getBoundingClientRect();
-        const sectionAbout = document.getElementById('About');
-        const sectionAboutPos = sectionAbout.getBoundingClientRect();
-        const sectionSkills = document.getElementById('Skills');
-        const sectionSkillsPos = sectionSkills.getBoundingClientRect();
-        const sectionResume = document.getElementById('Resume');
-        const sectionResumePos = sectionResume.getBoundingClientRect();
-        const sectionEducation = document.getElementById('Education');
-        const sectionEducationPos = sectionEducation.getBoundingClientRect();
-        const sectionLanguages = document.getElementById('Languages');
-        const sectionLanguagesPos = sectionLanguages.getBoundingClientRect();
-        const sectionContact = document.getElementById('Contact');
-        const sectionContactPos = sectionContact.getBoundingClientRect();
+        const sectionHome = document.getElementById('Home'),
+              sectionAbout = document.getElementById('About'),
+              sectionSkills = document.getElementById('Skills'),
+              sectionResume = document.getElementById('Resume'),
+              sectionEducation = document.getElementById('Education'),
+              sectionLanguages = document.getElementById('Languages'),
+              sectionContact = document.getElementById('Contact');
+
+        const sectionHomePos = sectionHome.getBoundingClientRect(),
+              sectionAboutPos = sectionAbout.getBoundingClientRect(),
+              sectionSkillsPos = sectionSkills.getBoundingClientRect(),
+              sectionResumePos = sectionResume.getBoundingClientRect(),
+              sectionEducationPos = sectionEducation.getBoundingClientRect(),
+              sectionLanguagesPos = sectionLanguages.getBoundingClientRect(),
+              sectionContactPos = sectionContact.getBoundingClientRect();
 
         if (sectionHomePos.top >= 0) {
             setSelectedItem('Home');

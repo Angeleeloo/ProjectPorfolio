@@ -1,13 +1,20 @@
 import styled from 'styled-components';
-import { palette, fontSize } from '../../Common/theme';
+import { mobileBreakPoint, palette, fontSize } from '../../Common/theme';
 
 export const CardContainer = styled.div`
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 45%;
+    padding: 10px;
     margin: 20px 0px;
+    &:hover {
+        transition: 0.5s;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    @media (max-width: ${mobileBreakPoint}) {
+        width: -webkit-fill-available;
+        margin: 20px;
 `;
-
+	
 export const CardIcon = styled.img`
     width: 30px;
     height: 30px;

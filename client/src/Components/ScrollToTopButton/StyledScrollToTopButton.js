@@ -16,6 +16,7 @@ export const StyledScrollToTopButton = styled.div`
   justify-content: center;
   background-color: ${palette.light};
   &:hover {
+    transition: 0.5s;
     background-color: ${palette.lightest};
   }
   @media (max-width: ${mobileBreakPoint}) {

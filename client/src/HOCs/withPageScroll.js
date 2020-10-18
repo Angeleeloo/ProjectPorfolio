@@ -2,11 +2,11 @@ import React, {useState, useEffect} from 'react';
 
 /* HOC that lets it's children know when the user scrolled until a certain Y point */
 
-export const WithPageScroll = ({yPoint, children} => {
+export const WithPageScroll = (yPoint, children) => {
     const [hasReachedPoint, setHasReachedPoint] = useState(false);
 
-    useEffect((): any => {
-        const doc: any = document;
+    useEffect(() => {
+        const doc = document;
         const onScroll = () => {
             if (doc.body.scrollTop > yPoint || doc.documentElement.scrollTop > yPoint) {
                 setHasReachedPoint(true);
@@ -25,5 +25,4 @@ export const WithPageScroll = ({yPoint, children} => {
             {children(hasReachedPoint)}
         </React.Fragment>
     );
-)
 };

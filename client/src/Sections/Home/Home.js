@@ -15,11 +15,11 @@ export const Home = () => {
 
   useEffect(() => {
     let i = 0;
-    const txt = 'Angelica Angress';
-    const speed = 100;
+    const txt = 'Developer';
+    const speed = 130;
     const typeWriter =() => {
       if (i < txt.length) {
-        document.getElementById("name").innerHTML += txt.charAt(i);
+        document.getElementById('profession').innerHTML += txt.charAt(i);
         i++;
         setTimeout(typeWriter, speed);
       }
@@ -31,8 +31,8 @@ export const Home = () => {
     <HomeContainer id={'Home'}>
       <TopContainer>
           <Text>Hi, I'm</Text>
-          <Name id={'name'}/>
-          <Profession>Developer</Profession>
+          <Name>Angelica Angress</Name>
+          <Profession id={'profession'}/>
           { isMobile ? 
               <Quote1>
                 <em>"It always seems impossible until it's done." -- Nelson Mandela</em>

@@ -26,6 +26,7 @@ export const Name = styled.h1`
   font-weight: bold;
   color: ${palette.darkest};
   line-height: 1;
+  font-family: 'Parisienne', cursive;
 `;
 
 export const Profession = styled.div`
@@ -33,6 +34,7 @@ export const Profession = styled.div`
   font-size: ${fontSize.title};
   font-weight: bold;
   margin: 0px;
+  font-family: 'Source Code Pro', monospace;
 `;
 
 export const Quote1 = styled.div`
@@ -75,6 +77,7 @@ export const DownloadItem1 = styled.a`
   padding: 23px 0px 21px 0px;
   cursor: pointer;
   &:hover {
+    transition: 0.5s;
     background-color: ${palette.lightest};
   }
   @media (max-width: ${mobileBreakPoint}) {

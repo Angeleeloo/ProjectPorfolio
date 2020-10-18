@@ -22,7 +22,7 @@ export const Text = styled.div`
 `;
 
 export const Name = styled.h1`
-  font-size: 60px;
+  font-size: 70px;
   font-weight: bold;
   color: ${palette.darkest};
   line-height: 1;

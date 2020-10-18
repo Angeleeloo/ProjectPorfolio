@@ -32,10 +32,10 @@ export const SidebarContainer = styled.div`
 
 export const Branding = styled.div`
   font-size: 20px;
+  cursor: pointer;
   font-weight: bold;
   text-align: center;
-  text-decoration: underline;
-  cursor: pointer;
+  font-family: 'Parisienne', cursive;
   &:hover{
     color: ${palette.lightest};
   }

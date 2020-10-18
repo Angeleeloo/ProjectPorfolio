@@ -73,6 +73,7 @@ export const DownloadItem1 = styled.a`
   letter-spacing: 0.25px;
   background-color: ${palette.light};
   padding: 23px 0px 21px 0px;
+  cursor: pointer;
   &:hover {
     background-color: ${palette.lightest};
   }

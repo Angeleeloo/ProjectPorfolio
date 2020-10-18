@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactGA from 'react-ga';
 import {isMobile} from '../../Common/utils';
 import {SocialButtons} from '../../Components/SocialButtons/SocialButtons';
@@ -13,7 +13,6 @@ export const Sidebar = () => {
   const scrollToSection = (section) => {
       ReactGA.event({ category: 'Sidebar', action: 'Branding_clicked', label: section });
       document.getElementById(section).scrollIntoView({behavior: "smooth", block: "start", inline: "center"});
-      setSelectedItem(section);
   };
   const toggleMenu = () => { setMobileMenuDisplay(!mobileMenuDisplay)} ;
   const scrollAndClose = (section) => { 
@@ -22,18 +21,44 @@ export const Sidebar = () => {
       toggleMenu();
     };
 
-    // useEffect(() => {
-    //     window.addEventListener('scroll', sectionInView);
-    //     return () => window.removeEventListener('scroll', sectionInView);
-    // });    
+    const sectionInView = () => {
+        
+        const sectionHome = document.getElementById('Home');
+        const sectionHomePos = sectionHome.getBoundingClientRect();
+        const sectionAbout = document.getElementById('About');
+        const sectionAboutPos = sectionAbout.getBoundingClientRect();
+        const sectionSkills = document.getElementById('Skills');
+        const sectionSkillsPos = sectionSkills.getBoundingClientRect();
+        const sectionResume = document.getElementById('Resume');
+        const sectionResumePos = sectionResume.getBoundingClientRect();
+        const sectionEducation = document.getElementById('Education');
+        const sectionEducationPos = sectionEducation.getBoundingClientRect();
+        const sectionLanguages = document.getElementById('Languages');
+        const sectionLanguagesPos = sectionLanguages.getBoundingClientRect();
+        const sectionContact = document.getElementById('Contact');
+        const sectionContactPos = sectionContact.getBoundingClientRect();
 
-    // const sectionInView = () => {
-    //     let section = document.getElementById('About');
-    //     let sectionPos = section.getBoundingClientRect().top;
-    //     sectionPos = 0 ? setSelectedItem(section) : null;
-    // }
+        if (sectionHomePos.top >= 0) {
+            setSelectedItem('Home');
+        } else if (sectionAboutPos.top >= 0) {
+            setSelectedItem('About');
+        } else if (sectionSkillsPos.top >= 0) {
+            setSelectedItem('Skills');
+        } else if (sectionResumePos.top >= 0) {
+            setSelectedItem('Resume');
+        } else if (sectionEducationPos.top >= 0) {
+            setSelectedItem('Education');
+        } else if (sectionLanguagesPos.top >= 0) {
+            setSelectedItem('Languages');
+        } else if (sectionContactPos.top >= 0) {
+            setSelectedItem('Contact');
+        }
+    }
 
-    // console.log('sectionInView is ', sectionInView);
+    useEffect(() => {
+        window.addEventListener('scroll', sectionInView);
+        return () => window.removeEventListener('scroll', sectionInView);
+    });    
 
   return (
     <SidebarContainer>

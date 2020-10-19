@@ -47,13 +47,11 @@ export const Resume = () => {
                 date: '2018 - PRESENT',
                 profession: 'FrontEnd Developer',
                 company: 'SimilarWeb',
-                jobDesc: `Working with React, Typescript, Flow, Styled Components, Material UI, GA Events, i18n in Webstorm. 
-                    Built responsive web pages for both desktop and mobile.
-                    Familiarity with Redux, Node.js and Express.
-                    CI/CD in Gitlab.
-                    Ran and maintained Java automation on Selenium with VSCode.
-                    Environment deployments made via TeamCity.
-                    Managed tasks in Jira`
+                jobDesc: `Developing a large scale B2C product with millions of users worldwide.
+                    Rebuilt the product by building new pages and redesigning existing pages, developing reusable components in React and dynamic styling using Styled Components and Material UI. 
+                    E2E responsibility (design, code, test, deploy) as part of a delivering scrum team (Product Manager, Designer, Web and Mobile Developers), managing tasks in Jira.
+                    Experienced in developing with ES6, Typescript, Flow, GA Events, i18n on Webstorm, including automation on Selenium and CI/CD on Gitlab with deployments via TeamCity.
+                    Familiarity with React Routes, Redux, Node.js and Express.`
             },
             {
                 date: '2015 - 2018',

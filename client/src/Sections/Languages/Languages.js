@@ -11,15 +11,15 @@ export const Languages = () => {
             <FlipCard
                 contentFront={'English | Mother tongue'}
                 contentBack={'Howdy!'}
-                GACategory={'Languages'}
-                GAAction={'Item_hovered'}
+                trackSection={'Languages'}
+                trackAction={'Item_hovered'}
                 GALabel={'English'}
                 bgImage={'https://media.giphy.com/media/35pTQFiy14OeA/giphy.gif'}/>
             <FlipCard
                 contentFront={'Hebrew | Bilingual proficiency'}
                 contentBack={'אהלן!'}
-                GACategory={'Skills'}
-                GAAction={'Item_hovered'}
+                trackSection={'Skills'}
+                trackAction={'Item_hovered'}
                 GALabel={'Hebrew'}
                 bgImage={'https://media.giphy.com/media/QB4wuim3QhuohnnliO/giphy-downsized.gif'}/>
         </LanguagesContainer>

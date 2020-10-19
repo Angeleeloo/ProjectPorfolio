@@ -52,8 +52,8 @@ export const Skills = () => {
                         key={item.title}
                         cardIcon={item.icon}
                         title={item.title}                        
-                        gaCategory={'Skills'}
-                        gaAction={'Item_hovered'} >
+                        trackSection={'Skills'}
+                        trackAction={'Item_hovered'} >
                             { item.listItems.map((subitem) => {
                                 return (
                                     <ListRow key={subitem}>

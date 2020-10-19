@@ -27,6 +27,9 @@ export const Name = styled.h1`
   color: ${palette.darkest};
   line-height: 1;
   font-family: 'Parisienne', cursive;
+  @media (max-width: ${mobileBreakPoint}) {
+    text-align: center;
+  }
 `;
 
 export const Profession = styled.div`
@@ -35,6 +38,8 @@ export const Profession = styled.div`
   font-weight: bold;
   margin: 0px;
   font-family: 'Source Code Pro', monospace;
+  @media (max-width: ${mobileBreakPoint}) {
+    text-align: center;
 `;
 
 export const Quote1 = styled.div`

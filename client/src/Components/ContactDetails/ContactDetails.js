@@ -15,7 +15,7 @@ export const ContactDetails = (props) => {
         <Subtitle>{subtitle}</Subtitle>
         <Detail onClick={() => clickContactLink(`tel:${telephone}`)}>Phone - {telephone}</Detail>
         <Detail onClick={() => clickContactLink(`mailto:${email}`)}>Email - {email}</Detail>
-        <Detail onClick={() => clickContactLink({locationLink})} target={'_blank'}>Location - {locationText}</Detail>
+        <Detail onClick={() => clickContactLink(locationLink)} target={'_blank'}>Location - {locationText}</Detail>
     </ContactDetailsContainer>
   );
 };

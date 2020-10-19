@@ -15,7 +15,7 @@ export const Home = () => {
 
   useEffect(() => {
     let i = 0;
-    const txt = 'Developer';
+    const txt = 'Frontend Developer';
     const speed = 130;
     const typeWriter =() => {
       if (i < txt.length) {

@@ -10,7 +10,7 @@ export const About = () => {
             <br/>ReactJS ▪ ES6 ▪ CSS ▪ HTML ▪ Cross-browser compatibility
         </Intro>
         <Description>
-            A delivery and results oriented Frontend Developer with 10+ years of experience in the hitech industry. 
+            A delivery and results oriented Frontend Developer, based in Tel Aviv, with 10+ years of experience in the hitech industry. 
             Having a ich background in Team Leadership, QA management and Frontend development, building, leading and growing together with multidisciplinary engineering teams from startup to corporate.
         </Description>        
     </Section>

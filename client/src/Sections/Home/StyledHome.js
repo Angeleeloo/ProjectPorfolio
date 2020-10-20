@@ -32,9 +32,11 @@ export const Name = styled.h1`
 
 export const Profession = styled.div`
   margin: 0px;
+  height: 0;
   line-height: 1;
   font-weight: bold;
   text-align: center;
+  margin-bottom: 50px;
   color: ${palette.light};
   font-size: ${fontSize.title};
   font-family: 'Source Code Pro', monospace;

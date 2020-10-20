@@ -40,6 +40,6 @@ export const ContactMeGif = styled.div`
     background-image: url("https://media.giphy.com/media/eM7IhAAqs9cZ4RyD7j/giphy.gif");
   }
   @media (max-width: ${mobileBreakPoint}) {
-    width: 370px;
+    width: 100%;
   }
 `;

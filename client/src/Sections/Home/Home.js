@@ -30,13 +30,11 @@ export const Home = () => {
           <Name>Angelica Angress</Name>
           <Profession id={'profession'}/>
           { isMobile ? 
-              <Quote1>
-                <em>"It always seems impossible until it's done." -- Nelson Mandela</em>
-              </Quote1>
+              <Quote1>"It always seems impossible until it's done." -- Nelson Mandela</Quote1>
           :
               <div>
-                  <Quote1><em>"It always seems impossible until it's done."</em></Quote1>
-                  <Quote2>-- Nelson Mandela</Quote2>
+                  <Quote1>"It always seems impossible until it's done."
+                    <br/>-- Nelson Mandela</Quote1>
               </div>
           }
       </TopContainer>

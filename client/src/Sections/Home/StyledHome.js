@@ -42,12 +42,11 @@ export const Profession = styled.div`
   font-family: 'Source Code Pro', monospace;
 `;
 
-export const Quote1 = styled.div`
+export const Quote1 = styled(Text)`
   display: flex;
   justify-content: center;
   padding-top: 100px;
-  color: ${palette.light};
-  font-size: ${fontSize.subtitle};
+  text-align: center;
   @media (max-width: ${mobileBreakPoint}) {
     text-align: center;
   }

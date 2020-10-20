@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 export const Intro = styled.div`
     text-align: center;
-    margin: 50px 0px;
+    margin-top: 50px;
+    margin-bottom: 30px;
     font-weight: bold;
 `;
 

@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import {HomeContainer, TopContainer, Text, Name, Profession, Quote1, Quote2, DownloadContainer, DownloadItem1, DownloadItem2} from './StyledHome'
+import {HomeContainer, TopContainer, Text, Name, Profession, Quote1, Quote2, SeparatorItem} from './StyledHome'
 import {isMobile} from '../../Common/utils';
 import ReactGA from 'react-ga';
 
@@ -7,10 +7,6 @@ export const Home = () => {
   const scrollToSection = (section) => {
     ReactGA.event({ category: 'Home', action: 'Scroll_to_section_clicked', label: section });
     document.getElementById(section).scrollIntoView({behavior: "smooth", block: "start", inline: "center"});
-  };
-  const downloadAndReport = (section) => {
-    ReactGA.event({ category: 'Home', action: 'Download_Resume_clicked', label: section });
-    window.location.href = section;
   };
 
   useEffect(() => {
@@ -44,10 +40,7 @@ export const Home = () => {
               </div>
           }
       </TopContainer>
-      <DownloadContainer>
-          <DownloadItem1 onClick={() => downloadAndReport('/Files/TBD.pdf')} download>DOWNLOAD RESUME</DownloadItem1>
-          <DownloadItem2 onClick={() => scrollToSection('Contact')}>CONTACT ME</DownloadItem2>
-      </DownloadContainer>
+      <SeparatorItem onClick={() => scrollToSection('Contact')}>CONTACT ME</SeparatorItem>
     </HomeContainer>
   );
 };

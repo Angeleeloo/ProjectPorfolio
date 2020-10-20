@@ -60,24 +60,15 @@ export const Quote2 = styled.div`
   font-size: ${fontSize.subtitle};
 `;
 
-export const DownloadContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  height: 40px;
-`;
-
-export const DownloadItem1 = styled.a`
+export const SeparatorItem = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  text-decoration: none;
-  width: 100%;
   color: white;
+  padding: 10px;
   font-size: 14px;
   font-weight: bold;
-  letter-spacing: 0.25px;
   background-color: ${palette.light};
-  padding: 23px 0px 21px 0px;
   cursor: pointer;
   &:hover {
     transition: 0.5s;
@@ -86,9 +77,4 @@ export const DownloadItem1 = styled.a`
   @media (max-width: ${mobileBreakPoint}) {
     font-size: 12px;
   }
-`;
-
-export const DownloadItem2 = styled(DownloadItem1)`
-  background-color: ${palette.darkest};
-  cursor: pointer;
 `;

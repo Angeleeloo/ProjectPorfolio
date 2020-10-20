@@ -48,10 +48,8 @@ export const Resume = () => {
                 profession: 'FrontEnd Developer',
                 company: 'SimilarWeb',
                 jobDesc: `Developing a large scale B2C product with millions of users worldwide.
-                    Rebuilt the product by building new pages and redesigning existing pages, developing reusable components in React and dynamic styling using Styled Components and Material UI. 
-                    E2E responsibility (design, code, test, deploy) as part of a delivering scrum team (Product Manager, Designer, Web and Mobile Developers), managing tasks in Jira.
-                    Experienced in developing with ES6, Typescript, Flow, GA Events, i18n on Webstorm, including automation on Selenium and CI/CD on Gitlab with deployments via TeamCity.
-                    Familiarity with React Routes, Redux, Node.js and Express.`
+                    Developing the product by building new pages and refactoring existing pages, creating reusable components in Reactjs together with dynamic styling in Styled Components and Material UI. 
+                    E2E responsibility (design, code, test, deploy) as part of a delivering scrum team (Product Manager, Designer, Web and Mobile Developers).`
             },
             {
                 date: '2015 - 2018',

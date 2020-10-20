@@ -7,27 +7,26 @@ import {SkillsContainer} from './StyledSkills.js';
 export const Skills = () => {
     const skillsList = [
         {
-            icon: './Images/pm-icon.svg',
-            title: `Project Manager`,
-            listItems: [
-                `Jira expert`,
-                `Scrum, Kanban, sprint & backlog task management`,
-                `Sprint monitoring and statistics via customized dashboard and reports`,
-                `Work procedure documentation in Wiki`,
-                `Training guidelines in Wiki`,
-                `Roadmaps in Gantt charts`
-            ]
-        },
-        {
             icon: './Images/dev-icon.svg',
             title: `Frontend Developer`,
             listItems: [
-                `HTML, CSS, Javascript`,
-                `React, Redux, Webpack, Webstorm`,
-                `Flow, Typescript`,
-                `Gitlab, TeamCity`,
-                `UTs with Jest`,
-                `E2E automation with Selenium`
+                `HTML, CSS, Javascript, ES6`,
+                `React, Styled Components, Material UI, Flow, Typescript, Webpack`,
+                `GA Events, i18n key value translations`,
+                `CI/CD with Gitlab, DevOps deployments inTeamCity`,
+                `Testing UTs with Jest and E2E Selenium automation in Java`,
+                `React Routes, Redux, Node.js and Express.`,
+                `Agile methodology, task management in Jira`
+            ]
+        },
+        {
+            icon: './Images/pm-icon.svg',
+            title: `Project Manager`,
+            listItems: [
+                `Jira expert, Scrum, Kanban, sprint & backlog task management`,
+                `Sprint monitoring and statistics via customized dashboard and reports`,
+                `Created Wiki documentations for work procedure and training guidelines`,
+                `Roadmaps in Gantt charts`
             ]
         },
         {
@@ -39,7 +38,7 @@ export const Skills = () => {
                 `Mobile application testing`,
                 `iOS & Android platforms`,
                 `E2E automation runs in Java via Selenium`,
-                `STPs documented in Enterprise Tester and excel`,
+                `STPs and STDs documented in Enterprise Tester and excel`,
             ]
         }        
     ];

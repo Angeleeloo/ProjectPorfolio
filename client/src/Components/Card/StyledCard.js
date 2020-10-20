@@ -4,7 +4,6 @@ import { mobileBreakPoint, palette, fontSize } from '../../Common/theme';
 export const CardContainer = styled.div`
     display: flex;
     flex-direction: column;
-    width: 45%;
     padding: 10px;
     margin: 20px 0px;
     &:hover {

@@ -11,7 +11,7 @@ export const About = () => {
         </Intro>
         <Description>
             A delivery and results oriented Frontend Developer with 10+ years of experience in the hitech industry. 
-            With a rich background in Team Leadership, QA management and Frontend development, building, leading and growing together with multidisciplinary engineering teams from startup to corporate.
+            Having a ich background in Team Leadership, QA management and Frontend development, building, leading and growing together with multidisciplinary engineering teams from startup to corporate.
         </Description>        
     </Section>
   );

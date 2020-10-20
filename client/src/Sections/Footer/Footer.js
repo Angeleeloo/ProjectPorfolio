@@ -8,9 +8,7 @@ export const Footer = () => {
   return (
     <Section id={'Footer'}>
         <FooterContainer>
-            <div>
-                (c) Angeleeloo 2020
-            </div>
+            <div>(c) Angeleeloo 2020</div>
             <SocialButtons sourceClick={'Footer'}/>
         </FooterContainer>
     </Section>

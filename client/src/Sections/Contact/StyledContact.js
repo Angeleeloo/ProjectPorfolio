@@ -37,8 +37,6 @@ export const ContactMeGif = styled.div`
   background-position: center;
   background-image: url("https://media.giphy.com/media/dxsoqMClq5jGKlAwXl/giphy.gif");
   &:hover {
-    background-image:
-      linear-gradient(#00000052,#0000007a),
-      url("./Images/contactMeDino.png");
+    background-image: url("https://media.giphy.com/media/eM7IhAAqs9cZ4RyD7j/giphy.gif");
   }
 `;

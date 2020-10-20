@@ -3,6 +3,7 @@ import { mobileBreakPoint, palette, fontSize } from '../../Common/theme';
 
 export const CardContainer = styled.div`
     display: flex;
+    width: 100%;
     flex-direction: column;
     padding: 10px;
     margin: 20px 0px;

@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import ReactGA from 'react-ga';
-import { palette } from '../../Common/theme.js';
+import {palette} from '../../Common/theme.js';
+import {Timeline} from '../../Components/Timeline/Timeline';
 import {Section} from '../../HOCs/Section/Section.js';
-import {EducationContainer, EducationItem, EducationDesc, TimelineSeparator, TimelineDot, TimelineConnector, Date, Title, Subtitle} from './StyledEducation';
+import {EducationContainer, EducationItem, EducationDesc, Date, Title, Subtitle} from './StyledEducation';
 
 export const Education = () => {
-    const [dotEdActive, setdotEdActive] = useState();
+    const [dotActive, setdotActive] = useState();
 
     const onScroll = () => {
         const dotEd1 = document.getElementById('dotEd1'),
@@ -22,14 +23,14 @@ export const Education = () => {
         const centerScreen = window.innerHeight / 2;
 
         if (dotEd1Pos >= centerScreen-10 && dotEd1Pos <= centerScreen+10) {
-            setdotEdActive(1);
+            setdotActive(1);
             ReactGA.event({ category: 'Education', action: 'dotEd_active', label: '1' });
             } else if (dotEd2Pos >= centerScreen-10 && dotEd2Pos <= centerScreen+10) {
-                setdotEdActive(2);
+                setdotActive(2);
             } else if (dotEd3Pos >= centerScreen-10 && dotEd3Pos <= centerScreen+10) {
-                setdotEdActive(3);
+                setdotActive(3);
             } else if (dotEd4Pos >= centerScreen-10 && dotEd4Pos <= centerScreen+10) {
-                setdotEdActive(4);
+                setdotActive(4);
         };
     };
 
@@ -62,17 +63,16 @@ export const Education = () => {
     ];
 
   return (
-    <Section id={'Education'} title={'Education'}>
+    <Section title={'Education'}>
         <EducationContainer>
             { educationList.map((item, index) => (
                 <EducationItem key={index}>
                     <Date>{item.date}</Date>
-                    <TimelineSeparator>
-                        <TimelineDot id={`dotEd${index+1}`} style={{ backgroundColor: dotEdActive === index+1 ? `${palette.light}` : 'white' }}/>
-                        <TimelineConnector />
-                    </TimelineSeparator>
+                    <Timeline 
+                        dotNumber={index+1} 
+                        dotActive={dotActive}/>
                     <EducationDesc>
-                        <Title style={{ color: dotEdActive === index+1 ? `${palette.light}` : 'black' }}>{item.education}</Title>
+                        <Title style={{ color: dotActive === index+1 ? `${palette.light}` : 'black' }}>{item.education}</Title>
                         <Subtitle>{item.school}</Subtitle>
                     </EducationDesc>
                 </EducationItem>

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { palette } from '../../Common/theme';
 
 export const EducationContainer = styled.div`
   display: flex;
@@ -34,4 +35,34 @@ export const Subtitle = styled.div`
   color: #757575;
   font-size: 15px;
   line-height: 20px;
+`;
+
+export const TimelineSeparator = styled.div`
+`;
+
+export const TimelineDot = styled.div`
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  border: 1px solid ${palette.light};
+  margin: 0px 11px;
+`;
+
+export const TimelineConnector = styled.div`
+    background-color: ${palette.light};
+  width: 1px;
+  height: 100%;
+  margin: 0px 15px;
+`;
+
+export const ProgressContainer = styled.div`
+  width: 8px;
+  height: 100px;
+  background: #ccc;
+`;
+
+export const ProgressBar = styled.div`
+  height: 8px;
+  background: #4caf50;
+  height: 0%;
 `;

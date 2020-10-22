@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import {HomeContainer, TopContainer, Text, Name, Profession, Quote1, Quote2, SeparatorItem} from './StyledHome'
+import {HomeContainer, TopContainer, Text, Name, Profession, Quote, SeparatorItem} from './StyledHome'
 import {isMobile} from '../../Common/utils';
 import ReactGA from 'react-ga';
 
@@ -30,11 +30,11 @@ export const Home = () => {
           <Name>Angelica Angress</Name>
           <Profession id={'profession'}/>
           { isMobile ? 
-              <Quote1>"It always seems impossible until it's done." -- Nelson Mandela</Quote1>
+              <Quote>"It always seems impossible until it's done." -- Nelson Mandela</Quote>
           :
               <div>
-                  <Quote1>"It always seems impossible until it's done."
-                    <br/>-- Nelson Mandela</Quote1>
+                  <Quote>"It always seems impossible until it's done."
+                    <br/>-- Nelson Mandela</Quote>
               </div>
           }
       </TopContainer>

@@ -42,7 +42,7 @@ export const Profession = styled.div`
   font-family: 'Source Code Pro', monospace;
 `;
 
-export const Quote1 = styled(Text)`
+export const Quote = styled(Text)`
   display: flex;
   justify-content: center;
   padding-top: 100px;
@@ -50,15 +50,6 @@ export const Quote1 = styled(Text)`
   @media (max-width: ${mobileBreakPoint}) {
     text-align: center;
   }
-`;
-
-export const Quote2 = styled.div`
-  display: flex;
-  color: grey;
-  padding: 0px;
-  justify-content: center;
-  color: ${palette.light};
-  font-size: ${fontSize.subtitle};
 `;
 
 export const SeparatorItem = styled.div`

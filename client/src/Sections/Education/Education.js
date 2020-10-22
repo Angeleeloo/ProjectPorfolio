@@ -6,7 +6,7 @@ import {Section} from '../../HOCs/Section/Section.js';
 import {EducationContainer, EducationItem, EducationDesc, Date, Title, Subtitle} from './StyledEducation';
 
 export const Education = () => {
-    const [dotActive, setdotActive] = useState();
+    const [dotActiveEd, setdotActiveEd] = useState();
 
     const onScroll = () => {
         const dotEd1 = document.getElementById('dotEd1'),
@@ -23,14 +23,14 @@ export const Education = () => {
         const centerScreen = window.innerHeight / 2;
 
         if (dotEd1Pos >= centerScreen-10 && dotEd1Pos <= centerScreen+10) {
-            setdotActive(1);
+            setdotActiveEd(1);
             ReactGA.event({ category: 'Education', action: 'dotEd_active', label: '1' });
             } else if (dotEd2Pos >= centerScreen-10 && dotEd2Pos <= centerScreen+10) {
-                setdotActive(2);
+                setdotActiveEd(2);
             } else if (dotEd3Pos >= centerScreen-10 && dotEd3Pos <= centerScreen+10) {
-                setdotActive(3);
+                setdotActiveEd(3);
             } else if (dotEd4Pos >= centerScreen-10 && dotEd4Pos <= centerScreen+10) {
-                setdotActive(4);
+                setdotActiveEd(4);
         };
     };
 
@@ -69,10 +69,10 @@ export const Education = () => {
                 <EducationItem key={index}>
                     <Date>{item.date}</Date>
                     <Timeline 
-                        dotNumber={index+1} 
-                        dotActive={dotActive}/>
+                        dotNumber={index+1}
+                        dotActive={dotActiveEd}/>
                     <EducationDesc>
-                        <Title style={{ color: dotActive === index+1 ? `${palette.light}` : 'black' }}>{item.education}</Title>
+                        <Title style={{ color: dotActiveEd === index+1 ? `${palette.light}` : 'black' }}>{item.education}</Title>
                         <Subtitle>{item.school}</Subtitle>
                     </EducationDesc>
                 </EducationItem>

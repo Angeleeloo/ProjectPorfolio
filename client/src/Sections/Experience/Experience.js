@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 import ReactGA from 'react-ga';
 import {palette} from '../../Common/theme';
 import {Section} from '../../HOCs/Section/Section.js';
-import {ExperienceContainer, ExperienceItem, ExperienceDesc, Date, Title, Subtitle, TimelineSeparator, TimelineDot, TimelineConnector} from './StyledResume.js';
+import {ExperienceContainer, ExperienceItem, ExperienceDesc, Date, Title, Subtitle, TimelineSeparator, TimelineDot, TimelineConnector} from './StyledExperience.js';
 
-export const Resume = () => {
-    const [dotActive, setDotActive] = useState();
+export const Experience = () => {
+    const [dotActive, setdotActive] = useState();
 
     const onScroll = () => {
         const dot1 = document.getElementById('dot1'),
@@ -24,16 +24,16 @@ export const Resume = () => {
         const centerScreen = window.innerHeight / 2;
 
         if (dot1Pos >= centerScreen-10 && dot1Pos <= centerScreen+10) {
-            setDotActive(1);
-            ReactGA.event({ category: 'Resume', action: 'Dot_active', label: '1' });
+            setdotActive(1);
+            ReactGA.event({ category: 'Experience', action: 'Dot_active', label: '1' });
             } else if (dot2Pos >= centerScreen-10 && dot2Pos <= centerScreen+10) {
-                setDotActive(2);
+                setdotActive(2);
             } else if (dot3Pos >= centerScreen-10 && dot3Pos <= centerScreen+10) {
-                setDotActive(3);
+                setdotActive(3);
             } else if (dot4Pos >= centerScreen-10 && dot4Pos <= centerScreen+10) {
-                setDotActive(4);
+                setdotActive(4);
             } else if (dot5Pos >= centerScreen-10 && dot5Pos <= centerScreen+10) {
-                setDotActive(5);
+                setdotActive(5);
         };
     };
 
@@ -80,7 +80,7 @@ export const Resume = () => {
       ];
 
     return (
-    <Section title={'Resume'}>
+    <Section title={'Experience'}>
         <ExperienceContainer>
             { experienceList.map((item, index) => (
                 <ExperienceItem key={index}>
@@ -88,7 +88,7 @@ export const Resume = () => {
                     <TimelineSeparator>
                         <TimelineDot id={`dot${index+1}`} style={{ backgroundColor: dotActive === index+1 ? `${palette.light}` : 'white' }}/>
                         <TimelineConnector />
-                    </TimelineSeparator> 
+                    </TimelineSeparator>            
                     <ExperienceDesc>
                         <Title style={{ color: dotActive === index+1 ? `${palette.light}` : 'black' }}><b>{item.profession}</b> | {item.company}</Title>
                         <Subtitle>{item.jobDesc}</Subtitle>

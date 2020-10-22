@@ -3,7 +3,7 @@ import {MainContainer, LeftPane, RightPane, ContentContainer} from './StyledMain
 import {Sidebar} from '../Sections/Sidebar/Sidebar';
 import {Home} from '../Sections/Home/Home';
 import {About} from '../Sections/About/About';
-import {Resume} from '../Sections/Resume/Resume';
+import {Experience} from '../Sections/Experience/Experience';
 import {Skills} from '../Sections/Skills/Skills';
 import {Education} from '../Sections/Education/Education';
 import {Languages} from '../Sections/Languages/Languages';
@@ -21,7 +21,7 @@ export const MainPage = () => {
                 <Home isMobile={isMobile}/>
                 <About/>
                 <Skills/>
-                <Resume/>
+                <Experience/>
                 <Education/>
                 <Languages/>
                 <Contact/>
@@ -38,7 +38,7 @@ export const MainPage = () => {
                         <Home/>
                         <About/>
                         <Skills/>
-                        <Resume/>
+                        <Experience/>
                         <Education/>
                         <Languages/>
                         <Contact/>

@@ -9,8 +9,9 @@ export const About = () => {
             Full Software Lifecycle ▪ Agile Development Practice ▪ B2B and B2C Development ▪ ReactJS ▪ ES6 ▪ CSS ▪ HTML ▪ Cross-browser compatibility
         </Intro>
         <Description>
-            A delivery and results oriented Frontend Developer, based in Tel Aviv, with 10+ years of experience in the Hi-Tech industry. 
-            Having a rich background in Team Leadership, QA management and Frontend development, building, leading and growing together with multidisciplinary engineering teams from startup to corporate.
+            A delivery and results oriented Frontend Developer, based in Tel Aviv, with 12 years of diverse R&D experience. 
+            A proven track record in building multi-disciplinary teams, leading complex technical projects, achieving high velocity delivery turnarounds 
+            and developing products to scale and scope under highly demanding hyper growth conditions of startups turned corporate.
         </Description>        
     </Section>
   );

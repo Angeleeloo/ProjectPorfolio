@@ -7,7 +7,7 @@ import {SidebarContainer, Branding, MenuItems, Item, HamburgerIcon} from './Styl
 import { palette } from '../../Common/theme';
 
 export const Sidebar = () => {
-  const sidebarItems = ['Home', 'About', 'Skills', 'Experience', 'Education', 'Languages', 'Contact'];
+  const sidebarItems = ['Home', 'About', /*'Skills',*/ 'Experience', 'Education', 'Languages', 'Contact'];
   const [selectedItem, setSelectedItem] = useState('Home');
   const [mobileMenuDisplay, setMobileMenuDisplay] = useState(false);
   const scrollToSection = (section) => {
@@ -25,7 +25,7 @@ export const Sidebar = () => {
         
         const sectionHome = document.getElementById('Home'),
               sectionAbout = document.getElementById('About'),
-              sectionSkills = document.getElementById('Skills'),
+            //   sectionSkills = document.getElementById('Skills'),
               sectionExperience = document.getElementById('Experience'),
               sectionEducation = document.getElementById('Education'),
               sectionLanguages = document.getElementById('Languages'),
@@ -33,7 +33,7 @@ export const Sidebar = () => {
 
         const sectionHomePos = sectionHome.getBoundingClientRect(),
               sectionAboutPos = sectionAbout.getBoundingClientRect(),
-              sectionSkillsPos = sectionSkills.getBoundingClientRect(),
+            //   sectionSkillsPos = sectionSkills.getBoundingClientRect(),
               sectionExperiencePos = sectionExperience.getBoundingClientRect(),
               sectionEducationPos = sectionEducation.getBoundingClientRect(),
               sectionLanguagesPos = sectionLanguages.getBoundingClientRect(),
@@ -43,8 +43,8 @@ export const Sidebar = () => {
             setSelectedItem('Home');
         } else if (sectionAboutPos.top >= 0) {
             setSelectedItem('About');
-        } else if (sectionSkillsPos.top >= 0) {
-            setSelectedItem('Skills');
+        // } else if (sectionSkillsPos.top >= 0) {
+        //     setSelectedItem('Skills');
         } else if (sectionExperiencePos.top >= 0) {
             setSelectedItem('Experience');
         } else if (sectionEducationPos.top >= 0) {

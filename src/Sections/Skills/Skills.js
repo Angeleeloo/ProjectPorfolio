@@ -21,7 +21,7 @@ export const Skills = () => {
         },
         {
             icon: './Images/pm-icon.svg',
-            title: `Project Manager`,
+            title: `Technical Project Manager`,
             listItems: [
                 `Jira expert, Scrum, Kanban, sprint & backlog task management`,
                 `Sprint monitoring and statistics via customized dashboard and reports`,
@@ -31,7 +31,7 @@ export const Skills = () => {
         },
         {
             icon: './Images/qa-icon.svg',
-            title: `QA Team Leader`,
+            title: `QA Department Leader`,
             listItems: [
                 `Web page testing`,
                 `Cross browser validations`,

@@ -11,15 +11,13 @@ export const Experience = () => {
         const dot1 = document.getElementById('dot1'),
               dot2 = document.getElementById('dot2'),
               dot3 = document.getElementById('dot3'),
-              dot4 = document.getElementById('dot4'),
-              dot5 = document.getElementById('dot5');
+              dot4 = document.getElementById('dot4');
 
         const topPos = (dot) => dot.getBoundingClientRect().top;
         const dot1Pos = topPos(dot1),
               dot2Pos = topPos(dot2),
               dot3Pos = topPos(dot3),
-              dot4Pos = topPos(dot4),
-              dot5Pos = topPos(dot5);
+              dot4Pos = topPos(dot4);
 
         const centerScreen = window.innerHeight / 2;
 
@@ -32,8 +30,6 @@ export const Experience = () => {
                 setdotActive(3);
             } else if (dot4Pos >= centerScreen-10 && dot4Pos <= centerScreen+10) {
                 setdotActive(4);
-            } else if (dot5Pos >= centerScreen-10 && dot5Pos <= centerScreen+10) {
-                setdotActive(5);
         };
     };
 
@@ -53,29 +49,27 @@ export const Experience = () => {
             },
             {
                 date: '2015 - 2018',
-                profession: 'Scrum Team Leader',
+                profession: 'Agile R&D Team Leader & QA',
                 company: 'SimilarWeb',
-                jobDesc: `Established and led scrum teams. 
-                    Managed project lifecycle from concept to launch, delivering measurable results. 
-                    Implemented work procedure foundations turning a newly built team into result-oriented pioneers adapted by other teams.`
-            },
-            {
-                date: '2015 - 2018',
-                profession: ' Web QA Engineer',
-                company: 'SimilarWeb',
-                jobDesc: `Created quality guidelines and maintained stability of SimilarWeb’s flagship B2B product.`
+                jobDesc: `Built and led 2 scrum teams, managed technical projects from concept to launch. 
+                    Achieved delivery turnarounds and grew the product to a solid level of maturity in terms of 
+                    customer value, quality, and maintainability, during the company’s rapid expansion from 100 to 300 employees 
+                    within my 1st year there. Created quality guidelines and maintained stability of SimilarWeb’s flagship B2B product.`
             },
             {
                 date: '2011 - 2015',
-                profession: 'QA Team Leader',
+                profession: 'QA Department Leader',
                 company: 'Viber',
-                jobDesc: `Built and managed several platform teams in Israel and abroad, adjusting together with the company’s quick paced growth from startup to corporate.`
+                jobDesc: `Established Viber’s QA department from the ground up, hiring and mentoring up to 30 QA engineers 
+                    divided into 5 platform teams (iPhone, Android, Desktop, Feature Phones, Automation) and 
+                    managing each platform’s team leader in Israel and abroad, under the highly demanding conditions of the application’s rapid growth and 
+                    business transition from startup to corporate (7 to 300 employees) contributing to one of Israel’s biggest exit in 2014 - Japan's Rakuten buys chat app Viber for $900 million.`
             },
             {
                 date: '2010 – 2011',
                 profession: 'Mobile QA Engineer',
                 company: 'Viber',
-                jobDesc: `Defined and developed the QA infrastructure from the ground up.`
+                jobDesc: `Defined and developed from scratch the QA infrastructure upon which Viber works today.`
             },
       ];
 

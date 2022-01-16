@@ -49,7 +49,7 @@ export const Experience = () => {
             },
             {
                 date: '2015 - 2018',
-                profession: 'Agile R&D Team Leader & QA',
+                profession: 'Agile R&D Team Leader',
                 company: 'SimilarWeb',
                 jobDesc: `Built and led 2 scrum teams, managed technical projects from concept to launch. 
                     Achieved delivery turnarounds and grew the product to a solid level of maturity in terms of 

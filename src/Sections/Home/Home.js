@@ -27,7 +27,7 @@ export const Home = () => {
     <HomeContainer id={'Home'}>
       <TopContainer>
           <Text>Hi, I'm</Text>
-          <Name>Angelica Angress</Name>
+          <Name>A A</Name>
           <Profession id={'profession'}/>
           { isMobile ? 
               <Quote>"It always seems impossible until it's done." -- Nelson Mandela</Quote>

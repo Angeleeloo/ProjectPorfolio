@@ -14,7 +14,7 @@ export const Contact = () => {
         <ContactContainer>
             <Title>Let's talk</Title>
             <Subtitle>Wanna collaborate? Got an offer?</Subtitle>
-            <ContactDetail onClick={() => clickContactLink(`mailto:angelica.avm@gmail.com`)}>angelica.avm@gmail.com</ContactDetail>
+            {/* <ContactDetail onClick={() => clickContactLink(`mailto:angelica.avm@gmail.com`)}>angelica.avm@gmail.com</ContactDetail> */}
             <ContactMeGif />
         </ContactContainer>
     </Section>

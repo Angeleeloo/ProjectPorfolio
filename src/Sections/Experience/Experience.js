@@ -57,7 +57,7 @@ export const Experience = () => {
                     within my 1st year there. Created quality guidelines and maintained stability of SimilarWeb’s flagship B2B product.`
             },
             {
-                date: '2011 - 2015',
+                date: '2010 - 2015',
                 profession: 'QA Department Leader',
                 company: 'Viber',
                 jobDesc: `Established Viber’s QA department from the ground up, hiring and mentoring up to 30 QA engineers 
@@ -66,7 +66,7 @@ export const Experience = () => {
                     business transition from startup to corporate (7 to 300 employees) contributing to one of Israel’s biggest exit in 2014 - Japan's Rakuten buys chat app Viber for $900 million.`
             },
             {
-                date: '2010 – 2011',
+                date: '2010',
                 profession: 'Mobile QA Engineer',
                 company: 'Viber',
                 jobDesc: `Defined and developed from scratch the QA infrastructure upon which Viber works today.`
